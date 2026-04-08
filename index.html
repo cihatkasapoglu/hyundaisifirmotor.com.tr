@@ -3,286 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cihat Hyundai | Türkiye'nin En Güvenilir Hyundai Sıfır Motor Satış Noktası</title>
+    <title>Cihat Hyundai | Premium Sıfır Motor Satış Noktası</title>
     <meta name="description" content="Sıfır Hyundai motorlar, Türkiye'nin 81 iline güvenli ve hızlı gönderim. Garantili Hyundai ve Kia sıfır sandık motor satışı.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoPartsStore",
+      "name": "Cihat Hyundai",
+      "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7",
+      "@id": "https://hyundaisifirmotor.com.tr",
+      "url": "https://hyundaisifirmotor.com.tr",
+      "telephone": "+905537383806",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Serhat Mah. 1126. Cad. No:14",
+        "addressLocality": "Yenimahalle",
+        "addressRegion": "Ankara",
+        "addressCountry": "TR"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- DEĞİŞKENLER VE TEMEL AYARLAR --- */
+        /* --- KÖK DEĞİŞKENLER --- */
         :root {
             --hyundai-blue: #002c5f;
             --hyundai-light-blue: #0072ce;
             --metallic-gray: #8c9296;
-            --light-gray: #f8f9fa;
+            --light-bg: #f4f6f8;
             --white: #ffffff;
-            --text-dark: #333333;
-            --text-light: #666666;
-            --transition: all 0.3s ease;
+            --text-dark: #1a1a1a;
+            --text-light: #555555;
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow: 0 10px 30px rgba(0, 44, 95, 0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--light-gray);
+            background-color: var(--light-bg);
             color: var(--text-dark);
-            line-height: 1.6;
+            line-height: 1.7;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-        }
-
+        h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: -0.5px; }
         a { text-decoration: none; color: inherit; transition: var(--transition); }
         ul { list-style: none; }
-        
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
 
-        /* --- HEADER (STICKY) --- */
+        /* --- PRELOADER (YÜKLEME EKRANI) --- */
+        #preloader {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--hyundai-blue); z-index: 9999;
+            display: flex; justify-content: center; align-items: center;
+            flex-direction: column; color: var(--white); transition: opacity 0.5s ease;
+        }
+        .loader-icon { font-size: 50px; animation: spin 2s linear infinite; margin-bottom: 20px; color: var(--hyundai-light-blue); }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        /* --- HEADER (GLASSMORPHISM) --- */
         header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            padding: 15px 0;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+            position: sticky; top: 0; z-index: 1000; padding: 20px 0;
+            transition: var(--transition);
         }
+        header.scrolled { padding: 10px 0; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
 
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 26px; font-weight: 800; color: var(--hyundai-blue); display: flex; align-items: center; gap: 12px; }
+        .logo i { color: var(--hyundai-light-blue); font-size: 30px; }
 
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--hyundai-blue);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .logo i { color: var(--hyundai-light-blue); }
-
-        nav ul {
-            display: flex;
-            gap: 25px;
-        }
-
-        nav a {
-            font-weight: 600;
-            color: var(--text-dark);
-            text-transform: uppercase;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
+        nav ul { display: flex; gap: 30px; }
+        nav a { font-family: 'Montserrat', sans-serif; font-weight: 600; color: var(--text-dark); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; cursor: pointer; position: relative; }
+        nav a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--hyundai-light-blue); transition: var(--transition); }
+        nav a:hover::after, nav a.active::after { width: 100%; }
         nav a:hover, nav a.active { color: var(--hyundai-light-blue); }
 
-        /* --- SAYFA GÖRÜNÜM YÖNETİMİ (SPA) --- */
-        .page-section { display: none; animation: fadeIn 0.5s ease; }
-        .page-section.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        /* --- SPA SİSTEMİ --- */
+        .page-section { display: none; opacity: 0; }
+        .page-section.active { display: block; animation: smoothFade 0.6s forwards; }
+        @keyframes smoothFade { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* --- SCROLL ANİMASYONLARI (OBSERVER İÇİN SINIFLAR) --- */
+        .animate-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .animate-up.visible { opacity: 1; transform: translateY(0); }
 
         /* --- HERO BÖLÜMÜ --- */
         .hero {
-            background: linear-gradient(rgba(0, 44, 95, 0.85), rgba(0, 44, 95, 0.85)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1920') center/cover fixed;
-            color: var(--white);
-            text-align: center;
-            padding: 120px 20px;
+            position: relative;
+            background: linear-gradient(to right, rgba(0, 44, 95, 0.95), rgba(0, 44, 95, 0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1920') center/cover fixed;
+            color: var(--white); text-align: center; padding: 160px 20px;
+            overflow: hidden;
         }
-
-        .hero h1 { font-size: 48px; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .hero p { font-size: 20px; font-weight: 300; margin-bottom: 40px; color: #e0e0e0; }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+        .hero h1 { font-size: 56px; margin-bottom: 25px; text-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+        .hero p { font-size: 22px; font-weight: 300; margin-bottom: 50px; color: #f0f0f0; max-width: 800px; margin-left: auto; margin-right: auto; }
 
         .btn {
-            padding: 12px 24px;
-            border-radius: 5px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-            border: none;
-            transition: var(--transition);
+            padding: 15px 30px; border-radius: 50px; font-weight: 600; font-family: 'Montserrat', sans-serif;
+            display: inline-flex; align-items: center; gap: 10px; cursor: pointer; border: none;
+            transition: var(--transition); text-transform: uppercase; letter-spacing: 1px; font-size: 14px;
         }
+        .btn-call { background-color: var(--hyundai-light-blue); color: var(--white); box-shadow: 0 10px 20px rgba(0, 114, 206, 0.3); }
+        .btn-call:hover { background-color: #005a9e; transform: translateY(-5px); box-shadow: 0 15px 25px rgba(0, 114, 206, 0.4); }
+        .btn-wa { background-color: #25D366; color: var(--white); box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3); }
+        .btn-wa:hover { background-color: #1ebe57; transform: translateY(-5px); box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4); }
 
-        .btn-call { background-color: var(--hyundai-light-blue); color: var(--white); }
-        .btn-call:hover { background-color: #005a9e; transform: translateY(-3px); }
-        .btn-wa { background-color: #25D366; color: var(--white); }
-        .btn-wa:hover { background-color: #1ebe57; transform: translateY(-3px); }
+        .hero-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 
         /* --- ÖZELLİKLER (FEATURES) --- */
         .features {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 50px 20px;
-            background-color: var(--white);
-            margin-top: -30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            position: relative;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-            flex-wrap: wrap;
+            display: flex; justify-content: space-between; gap: 30px; padding: 50px;
+            background: var(--white); margin-top: -60px; border-radius: 20px;
+            box-shadow: var(--shadow); position: relative; z-index: 10;
+            max-width: 1100px; margin-left: auto; margin-right: auto; flex-wrap: wrap;
         }
+        .feature-item { text-align: center; flex: 1; min-width: 200px; padding: 20px; transition: var(--transition); border-radius: 15px; }
+        .feature-item:hover { background: var(--light-bg); transform: translateY(-5px); }
+        .feature-item i { font-size: 40px; color: var(--hyundai-light-blue); margin-bottom: 15px; }
+        .feature-item h4 { font-size: 18px; color: var(--hyundai-blue); }
 
-        .feature-item {
-            text-align: center;
-            flex: 1;
-            min-width: 150px;
+        /* --- ARAMA KUTUSU (LIVE SEARCH) --- */
+        .search-box {
+            position: relative; max-width: 600px; margin: 0 auto 40px;
         }
-
-        .feature-item i {
-            font-size: 30px;
-            color: var(--hyundai-blue);
-            margin-bottom: 10px;
+        .search-box input {
+            width: 100%; padding: 20px 25px; border-radius: 50px; border: 2px solid #e0e0e0;
+            font-size: 16px; outline: none; transition: var(--transition); font-family: 'Roboto', sans-serif;
+            box-shadow: var(--shadow);
         }
+        .search-box input:focus { border-color: var(--hyundai-light-blue); }
+        .search-box i { position: absolute; right: 25px; top: 50%; transform: translateY(-50%); font-size: 20px; color: var(--metallic-gray); }
 
-        .feature-item h4 { font-size: 16px; color: var(--text-dark); }
-
-        /* --- KART YAPISI (MOTORLAR & BLOG) --- */
-        .section-title {
-            text-align: center;
-            font-size: 32px;
-            color: var(--hyundai-blue);
-            margin: 60px 0 30px;
-            text-transform: uppercase;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
+        /* --- KART YAPISI --- */
+        .section-title { text-align: center; font-size: 36px; color: var(--hyundai-blue); margin: 80px 0 40px; }
+        
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-bottom: 80px; }
 
         .card {
-            background: var(--white);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
-            border-bottom: 4px solid transparent;
-            cursor: pointer;
+            background: var(--white); border-radius: 20px; overflow: hidden; box-shadow: var(--shadow);
+            transition: var(--transition); cursor: pointer; position: relative; border: 1px solid #f0f0f0;
         }
+        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+        .card img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s ease; }
+        .card:hover img { transform: scale(1.05); }
+        .card-body { padding: 30px; background: var(--white); position: relative; z-index: 2; }
+        .card-title { font-size: 22px; color: var(--hyundai-blue); margin-bottom: 10px; }
+        .card-desc { color: var(--text-light); font-size: 15px; margin-bottom: 20px; }
+        .card-link { color: var(--hyundai-light-blue); font-weight: 700; font-family: 'Montserrat'; font-size: 14px; text-transform: uppercase; }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-bottom-color: var(--hyundai-light-blue);
-        }
-
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-title { font-size: 20px; color: var(--hyundai-blue); margin-bottom: 10px; }
-        .card-desc { color: var(--text-light); font-size: 14px; margin-bottom: 15px; }
-
-        /* --- ÜRÜN & BLOG DETAY SAYFASI --- */
+        /* --- DETAY SAYFALARI --- */
         .detail-container {
-            background: var(--white);
-            border-radius: 10px;
-            padding: 40px;
-            margin: 40px auto;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            display: flex;
-            gap: 40px;
-            flex-wrap: wrap;
+            background: var(--white); border-radius: 20px; padding: 50px; margin: 50px auto;
+            box-shadow: var(--shadow); display: flex; gap: 50px; flex-wrap: wrap;
         }
-
-        .detail-img { flex: 1; min-width: 300px; }
-        .detail-img img { width: 100%; border-radius: 10px; }
-        
-        .detail-info { flex: 1; min-width: 300px; }
-        .detail-info h2 { font-size: 32px; color: var(--hyundai-blue); margin-bottom: 20px; }
-        .detail-info p { margin-bottom: 20px; color: var(--text-light); }
-        .tech-specs { background: var(--light-gray); padding: 20px; border-radius: 8px; margin-bottom: 20px; border-left: 4px solid var(--metallic-gray); }
-        .tech-specs li { margin-bottom: 8px; font-weight: 500; }
-
-        /* --- GOOGLE YORUMLARI --- */
-        .reviews { background: var(--white); padding: 50px 0; }
-        .review-card { background: var(--light-gray); padding: 20px; border-radius: 10px; border: 1px solid #e0e0e0; }
-        .review-header { display: flex; justify-content: space-between; margin-bottom: 10px; }
-        .reviewer { display: flex; align-items: center; gap: 10px; font-weight: bold; }
-        .reviewer img { width: 40px; height: 40px; border-radius: 50%; background: #ccc; }
-        .stars { color: #fbbc05; }
-        .google-icon { width: 20px; height: 20px; }
+        .detail-img { flex: 1; min-width: 300px; border-radius: 20px; overflow: hidden; }
+        .detail-img img { width: 100%; height: 100%; object-fit: cover; }
+        .detail-info { flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center; }
+        .detail-info h2 { font-size: 38px; color: var(--hyundai-blue); margin-bottom: 20px; }
+        .tech-specs { background: var(--light-bg); padding: 30px; border-radius: 15px; margin: 20px 0; border-left: 5px solid var(--hyundai-light-blue); }
+        .tech-specs li { margin-bottom: 12px; font-weight: 500; display: flex; align-items: center; gap: 10px; }
+        .tech-specs li i { color: var(--hyundai-light-blue); }
 
         /* --- İLETİŞİM & HARİTA --- */
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; margin-bottom: 60px; }
-        .contact-info { background: var(--hyundai-blue); color: var(--white); padding: 40px; border-radius: 10px; }
-        .contact-info h3 { margin-bottom: 20px; font-size: 24px; color: var(--hyundai-light-blue); }
-        .contact-info p { margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
-        .map-container iframe { width: 100%; height: 100%; min-height: 300px; border: none; border-radius: 10px; }
-
-        /* --- HAKKIMIZDA MODAL/SAYFA --- */
-        .about-text {
-            background: var(--white);
-            padding: 50px;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-            margin: 40px auto;
-            border-top: 4px solid var(--hyundai-blue);
-        }
-        .about-text p, .about-text ul { margin-bottom: 15px; color: var(--text-dark); font-size: 16px; }
-        .about-text ul { padding-left: 20px; list-style-type: disc; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px; margin-bottom: 80px; }
+        .contact-info { background: linear-gradient(135deg, var(--hyundai-blue), #001a38); color: var(--white); padding: 50px; border-radius: 20px; box-shadow: var(--shadow); }
+        .contact-info h3 { font-size: 28px; margin-bottom: 30px; color: var(--white); }
+        .contact-info p { margin-bottom: 20px; font-size: 16px; display: flex; align-items: center; gap: 15px; }
+        .contact-info i { font-size: 20px; color: var(--hyundai-light-blue); width: 25px; text-align: center; }
+        .map-container iframe { width: 100%; height: 100%; min-height: 450px; border: none; border-radius: 20px; box-shadow: var(--shadow); filter: grayscale(20%); }
 
         /* --- FLOATING WHATSAPP & FOOTER --- */
         .floating-wa {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 35px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            z-index: 9999;
-            transition: var(--transition);
+            position: fixed; bottom: 40px; right: 40px; background: #25D366; color: white; width: 65px; height: 65px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 35px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); z-index: 9999; transition: var(--transition);
         }
-        .floating-wa:hover { transform: scale(1.1); }
+        .floating-wa:hover { transform: translateY(-10px) scale(1.05); }
 
-        footer { background: var(--text-dark); color: var(--white); text-align: center; padding: 30px 20px; margin-top: 50px; }
+        footer { background: var(--text-dark); color: var(--metallic-gray); text-align: center; padding: 40px 20px; font-size: 14px; }
+        footer strong { color: var(--white); }
 
-        /* --- RESPONSIVE TASARIM --- */
-        @media (max-width: 768px) {
-            .header-content { flex-direction: column; gap: 15px; }
-            nav ul { flex-wrap: wrap; justify-content: center; }
-            .hero h1 { font-size: 32px; }
+        @media (max-width: 900px) {
+            .header-content { flex-direction: column; gap: 20px; }
+            .hero h1 { font-size: 40px; }
             .contact-grid { grid-template-columns: 1fr; }
+            .features { flex-direction: column; padding: 30px; margin-top: -30px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <div id="preloader">
+        <i class="fa-solid fa-gear loader-icon"></i>
+        <h2>Cihat Hyundai</h2>
+        <p style="font-weight: 300; letter-spacing: 2px;">Sistem Yükleniyor...</p>
+    </div>
+
+    <header id="main-header">
         <div class="container header-content">
             <div class="logo" onclick="navigateTo('home')" style="cursor:pointer;">
                 <i class="fa-solid fa-car"></i> Cihat Hyundai
             </div>
             <nav>
                 <ul>
-                    <li><a onclick="navigateTo('home')">Ana Sayfa</a></li>
+                    <li><a onclick="navigateTo('home')" class="active">Ana Sayfa</a></li>
                     <li><a onclick="navigateTo('engines')">Motorlar</a></li>
                     <li><a onclick="navigateTo('blog')">Blog</a></li>
                     <li><a onclick="navigateTo('about')">Hakkımızda</a></li>
@@ -293,278 +227,211 @@
     </header>
 
     <main class="container">
+        
         <section id="home" class="page-section active">
-            <div class="hero">
-                <h1>Türkiye'nin En Güvenilir Hyundai Sıfır Motor Satış Noktası</h1>
-                <p>Sıfır Hyundai motorlar – 81 ile güvenli gönderim</p>
+            <div class="hero animate-up visible">
+                <h1>Türkiye'nin En Güvenilir<br><span style="color:var(--hyundai-light-blue);">Hyundai</span> Sıfır Motor Satış Noktası</h1>
+                <p>Orijinal sıfır Hyundai ve Kia motorları, garantili hizmet ve 81 ile aynı gün kargo avantajıyla sizlerle.</p>
                 <div class="hero-buttons">
-                    <a href="tel:05537383806" class="btn btn-call"><i class="fa-solid fa-phone"></i> Hemen Ara (Hat 1)</a>
-                    <a href="https://wa.me/905537383806" target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp (Hat 1)</a>
-                    <a href="tel:05348441861" class="btn btn-call"><i class="fa-solid fa-phone"></i> Hemen Ara (Hat 2)</a>
-                    <a href="https://wa.me/905348441861" target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp (Hat 2)</a>
+                    <a href="tel:05537383806" class="btn btn-call"><i class="fa-solid fa-phone"></i> Müşteri Temsilcisi 1</a>
+                    <a href="tel:05348441861" class="btn btn-call"><i class="fa-solid fa-phone"></i> Müşteri Temsilcisi 2</a>
                 </div>
             </div>
 
-            <div class="features">
-                <div class="feature-item"><i class="fa-solid fa-certificate"></i><h4>Sıfır Motor</h4></div>
-                <div class="feature-item"><i class="fa-solid fa-shield-halved"></i><h4>Garantili Ürün</h4></div>
-                <div class="feature-item"><i class="fa-solid fa-truck-fast"></i><h4>Hızlı Kargo</h4></div>
-                <div class="feature-item"><i class="fa-solid fa-tags"></i><h4>Uygun Fiyat</h4></div>
+            <div class="features animate-up">
+                <div class="feature-item"><i class="fa-solid fa-certificate"></i><h4>Sıfır Sandık Motor</h4></div>
+                <div class="feature-item"><i class="fa-solid fa-shield-check"></i><h4>Distribütör Garantisi</h4></div>
+                <div class="feature-item"><i class="fa-solid fa-truck-fast"></i><h4>81 İle Hızlı Kargo</h4></div>
+                <div class="feature-item"><i class="fa-solid fa-handshake-angle"></i><h4>Satış Sonrası Destek</h4></div>
             </div>
 
-            <h2 class="section-title">Öne Çıkan Motorlar</h2>
-            <div class="grid" id="featured-engines">
-                </div>
-
-            <div class="reviews">
-                <h2 class="section-title">Müşterilerimiz Ne Diyor?</h2>
-                <div class="grid">
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer">
-                                <div style="background-color: #4285F4; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items:center; justify-content:center;">A</div>
-                                Ahmet Yılmaz
-                            </div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
-                        </div>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <p style="margin-top:10px; font-size:14px;">"Hyundai Tucson aracım için sıfır motor siparişi verdim. Kargo süreci çok hızlıydı ve motor tam anlatıldığı gibi orijinal. Teşekkürler Cihat Hyundai."</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer">
-                                <div style="background-color: #DB4437; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items:center; justify-content:center;">M</div>
-                                Mehmet Demir
-                            </div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
-                        </div>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <p style="margin-top:10px; font-size:14px;">"Fiyatlar piyasaya göre çok uygun. Müşteri temsilcileri Whatsapp üzerinden hemen ilgilendiler. Güvenilir bir firma."</p>
-                    </div>
-                    <div class="review-card">
-                        <div class="review-header">
-                            <div class="reviewer">
-                                <div style="background-color: #F4B400; color: white; width: 35px; height: 35px; border-radius: 50%; display: flex; align-items:center; justify-content:center;">C</div>
-                                Caner Çelik
-                            </div>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" class="google-icon" alt="Google">
-                        </div>
-                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                        <p style="margin-top:10px; font-size:14px;">"Ankara'daki yerlerine gidip teslim aldım. Esnaflıkları ve ilgileri harika. Sıfır motor arayanlara kesinlikle tavsiye ederim."</p>
-                    </div>
-                </div>
-            </div>
+            <h2 class="section-title animate-up">Öne Çıkan Motorlar</h2>
+            <div class="grid animate-up" id="featured-engines"></div>
         </section>
 
         <section id="engines" class="page-section">
-            <h2 class="section-title">Tüm Hyundai Motor Seçenekleri</h2>
-            <div class="grid" id="all-engines">
-                </div>
+            <h2 class="section-title animate-up">Tüm Motor Seçenekleri</h2>
+            <div class="search-box animate-up">
+                <input type="text" id="searchInput" placeholder="Araç modeli veya motor adı arayın (Örn: Tucson)..." onkeyup="filterEngines()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="grid animate-up" id="all-engines"></div>
         </section>
 
-        <section id="product-detail" class="page-section">
-            <div class="detail-container" id="product-content">
-                </div>
-        </section>
-
+        <section id="product-detail" class="page-section"><div class="detail-container" id="product-content"></div></section>
+        
         <section id="blog" class="page-section">
-            <h2 class="section-title">Otomotiv Blogu</h2>
-            <div class="grid" id="blog-list">
-                </div>
+            <h2 class="section-title animate-up">Otomotiv Rehberi</h2>
+            <div class="grid animate-up" id="blog-list"></div>
         </section>
 
-        <section id="blog-detail" class="page-section">
-            <div class="detail-container" id="blog-content" style="flex-direction: column;">
-                </div>
-        </section>
+        <section id="blog-detail" class="page-section"><div class="detail-container" id="blog-content" style="flex-direction: column;"></div></section>
 
         <section id="about" class="page-section">
-            <h2 class="section-title">Hakkımızda</h2>
-            <div class="about-text">
-                <p><strong>Cihat Hyundai</strong> olarak, Hyundai marka araçlara yönelik sıfır motor ve yedek parça satışında güvenilir ve profesyonel hizmet sunmak amacıyla yola çıktık. Sektörde edindiğimiz tecrübe ve müşteri memnuniyeti odaklı yaklaşımımız sayesinde, Türkiye’nin dört bir yanına kaliteli ürünleri hızlı ve güvenli şekilde ulaştırıyoruz.</p>
-                <p>Firmamız, başta Hyundai ve Kia olmak üzere araç sahiplerinin ihtiyaç duyduğu sıfır motorlar ile birlikte geniş yedek parça seçenekleri sunar. Tüm ürünlerimiz titizlikle kontrol edilir ve müşterilerimize sorunsuz şekilde ulaştırılır. Amacımız, müşterilerimize sadece ürün satmak değil; aynı zamanda güven, kalite ve sürdürülebilir bir hizmet sunmaktır.</p>
-                <p><strong>Cihat Hyundai olarak:</strong></p>
-                <ul>
-                    <li>Uygun fiyat ve hızlı tedarik sağlarız</li>
-                    <li>Türkiye’nin 81 iline kargo hizmeti veririz</li>
-                    <li>Satış öncesi ve sonrası destek ile her zaman yanınızda oluruz</li>
-                    <li>Gelişen otomotiv sektörünü yakından takip ederek, ürün yelpazemizi sürekli genişletiyor ve müşterilerimize en iyi çözümleri sunmaya devam ediyoruz.</li>
-                </ul>
+            <div class="detail-container animate-up" style="flex-direction: column;">
+                <h2 style="color:var(--hyundai-blue); font-size: 36px; margin-bottom: 30px;">Cihat Hyundai Hakkında</h2>
+                <p style="font-size: 18px; color: var(--text-light); margin-bottom: 20px;"><strong>Cihat Hyundai</strong> olarak, Hyundai marka araçlara yönelik sıfır motor ve yedek parça satışında güvenilir ve profesyonel hizmet sunmak amacıyla yola çıktık. Sektörde edindiğimiz tecrübe ve müşteri memnuniyeti odaklı yaklaşımımız sayesinde, Türkiye’nin dört bir yanına kaliteli ürünleri hızlı ve güvenli şekilde ulaştırıyoruz.</p>
+                <p style="font-size: 18px; color: var(--text-light); margin-bottom: 30px;">Firmamız, başta Hyundai ve Kia olmak üzere araç sahiplerinin ihtiyaç duyduğu sıfır motorlar ile birlikte geniş yedek parça seçenekleri sunar. Tüm ürünlerimiz titizlikle kontrol edilir ve müşterilerimize sorunsuz şekilde ulaştırılır. Amacımız, sadece ürün satmak değil; aynı zamanda güven, kalite ve sürdürülebilir bir hizmet sunmaktır.</p>
+                
+                <div class="tech-specs">
+                    <h3 style="margin-bottom: 20px; color: var(--hyundai-blue);">Neden Bizi Seçmelisiniz?</h3>
+                    <ul style="font-size: 17px; color: var(--text-dark);">
+                        <li><i class="fa-solid fa-check-circle"></i> Uygun fiyat ve hızlı tedarik garantisi.</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Türkiye’nin 81 iline sigortalı kargo hizmeti.</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Satış öncesi ve sonrası alanında uzman destek.</li>
+                        <li><i class="fa-solid fa-check-circle"></i> Gelişen sektörü yakından takip eden vizyoner yaklaşım.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section id="contact" class="page-section">
-            <h2 class="section-title">İletişim</h2>
-            <div class="contact-grid">
+            <h2 class="section-title animate-up">Bizimle İletişime Geçin</h2>
+            <div class="contact-grid animate-up">
                 <div class="contact-info">
-                    <h3>Bize Ulaşın</h3>
-                    <p><i class="fa-solid fa-location-dot"></i> Serhat Mah. 1126. Cad. No:14 Yenimahalle/Ankara</p>
+                    <h3>Genel Merkez</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Serhat Mah. 1126. Cad. No:14<br>Yenimahalle / Ankara</p>
                     <p><i class="fa-solid fa-phone"></i> <a href="tel:05537383806">0553 738 38 06</a></p>
                     <p><i class="fa-solid fa-phone"></i> <a href="tel:05348441861">0534 844 18 61</a></p>
                     <p><i class="fa-solid fa-envelope"></i> bilgi@hyundaisifirmotor.com.tr</p>
                     
-                    <div style="margin-top: 30px;">
-                        <a href="https://wa.me/905537383806" target="_blank" class="btn btn-wa" style="width: 100%; justify-content: center; margin-bottom: 15px;"><i class="fa-brands fa-whatsapp"></i> Whatsapp Destek (1)</a>
-                        <a href="https://wa.me/905348441861" target="_blank" class="btn btn-wa" style="width: 100%; justify-content: center;"><i class="fa-brands fa-whatsapp"></i> Whatsapp Destek (2)</a>
+                    <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 15px;">
+                        <a href="https://wa.me/905537383806" target="_blank" class="btn btn-wa" style="justify-content: center;"><i class="fa-brands fa-whatsapp"></i> 1. Hattan Whatsapp Destek</a>
+                        <a href="https://wa.me/905348441861" target="_blank" class="btn btn-wa" style="justify-content: center;"><i class="fa-brands fa-whatsapp"></i> 2. Hattan Whatsapp Destek</a>
                     </div>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.251508821958!2d32.7562!3d39.9806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDU4JzUwLjIiTiAzMsKwNDUnMjIuMyJF!5e0!3m2!1str!2str!4v1620000000000!5m2!1str!2str" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps?q=Serhat+Mah.+1126.+Cad.+No:14+Yenimahalle/Ankara&output=embed" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
         </section>
     </main>
 
-    <a href="https://wa.me/905537383806" target="_blank" class="floating-wa">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+    <a href="https://wa.me/905537383806" target="_blank" class="floating-wa"><i class="fa-brands fa-whatsapp"></i></a>
 
     <footer>
-        <p>&copy; 2026 Cihat Hyundai. Tüm Hakları Saklıdır. | hyundaisifirmotor.com.tr</p>
+        <p>© 2026 <strong>Cihat Hyundai</strong>. Tüm Hakları Saklıdır. | Premium Otomotiv Çözümleri</p>
     </footer>
 
     <script>
-        // --- VERİ TABANI SİMÜLASYONU ---
+        // --- 1. PRELOADER YÖNETİMİ ---
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                const preloader = document.getElementById('preloader');
+                preloader.style.opacity = '0';
+                setTimeout(() => preloader.style.display = 'none', 500);
+            }, 800); // Gerçekçi bir bekleme süresi
+        });
 
+        // --- 2. SCROLL & HEADER EFEKTLERİ ---
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if(window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        // --- 3. SCROLL ANİMASYONLARI (INTERSECTION OBSERVER) ---
+        const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Sadece bir kere çalışsın
+                }
+            });
+        }, observerOptions);
+
+        function reObserveElements() {
+            document.querySelectorAll('.animate-up').forEach(el => {
+                el.classList.remove('visible');
+                observer.observe(el);
+            });
+        }
+
+        // --- 4. VERİLER ---
         const engines = [
-            {
-                id: 1,
-                name: "Hyundai Accent Blue 1.6 CRDI Sandık Motor",
-                desc: "1.6 Dizel (CRDI) garantili sıfır motor. Tak-çalıştır formattadır.",
-                img: "https://images.unsplash.com/photo-1590740901596-302a246d6b05?auto=format&fit=crop&w=600&q=80",
-                compatible: "Accent Blue, i30",
-                tech: ["Yakıt Tipi: Dizel", "Silindir Hacmi: 1582 cc", "Durum: %100 Sıfır / Kutusunda"]
-            },
-            {
-                id: 2,
-                name: "Hyundai Tucson 1.6 T-GDI Sıfır Motor",
-                desc: "Turbolu benzinli T-GDI orijinal sıfır motor bloğu ve donanımları.",
-                img: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80",
-                compatible: "Tucson, Sportage",
-                tech: ["Yakıt Tipi: Benzin", "Aşırı Besleme: Turbo", "Durum: Sıfır Garantili"]
-            },
-            {
-                id: 3,
-                name: "Hyundai i20 1.4 MPI Orijinal Motor",
-                desc: "Yeni nesil 1.4 atmosferik MPI benzinli sıfır sandık motor.",
-                img: "https://images.unsplash.com/photo-1506544777-62cc96502073?auto=format&fit=crop&w=600&q=80",
-                compatible: "i20, Bayon",
-                tech: ["Yakıt Tipi: Benzin", "Valf: 16V", "Durum: Distribütör Garantili"]
-            }
+            { id: 1, name: "Hyundai Accent Blue 1.6 CRDI Sandık Motor", desc: "1.6 Dizel (CRDI) garantili sıfır motor. Tak-çalıştır formattadır.", img: "https://images.unsplash.com/photo-1590740901596-302a246d6b05?auto=format&fit=crop&w=600&q=80", compatible: "Accent Blue, i30", tech: ["Yakıt Tipi: Dizel", "Silindir Hacmi: 1582 cc", "Durum: %100 Sıfır / Kutusunda"] },
+            { id: 2, name: "Hyundai Tucson 1.6 T-GDI Sıfır Motor", desc: "Turbolu benzinli T-GDI orijinal sıfır motor bloğu ve donanımları.", img: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=600&q=80", compatible: "Tucson, Sportage", tech: ["Yakıt Tipi: Benzin", "Aşırı Besleme: Turbo", "Durum: Sıfır Garantili"] },
+            { id: 3, name: "Hyundai i20 1.4 MPI Orijinal Motor", desc: "Yeni nesil 1.4 atmosferik MPI benzinli sıfır sandık motor.", img: "https://images.unsplash.com/photo-1506544777-62cc96502073?auto=format&fit=crop&w=600&q=80", compatible: "i20, Bayon", tech: ["Yakıt Tipi: Benzin", "Valf: 16V", "Durum: Distribütör Garantili"] }
         ];
 
         const blogs = [
-            {
-                id: 1,
-                title: "Hyundai Motor Neden Değişir?",
-                summary: "Araç motorlarının ömrünü tamamlaması veya ağır hasar alması durumunda motor değişimi gerekebilir...",
-                img: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=600&q=80",
-                content: "Motor değişiminin başlıca sebepleri arasında yağsız kalma, hararet veya triger kopması gibi ağır mekanik arızalar gelir. Revizyonun kurtarmadığı durumlarda sıfır sandık motor almak çok daha uzun ömürlü ve güvenilir bir çözümdür. Cihat Hyundai olarak bu süreçte en doğru çözümü sunuyoruz."
-            },
-            {
-                id: 2,
-                title: "Sıfır Motor mu Revizyon mu?",
-                summary: "Arızalı motoru tamir ettirmek ile sıfırını almak arasındaki farklar nelerdir?",
-                img: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80",
-                content: "Revizyon işlemi, ustanın el işçiliğine bağlıdır ve zamanla eski parçalardan kaynaklı yeni sorunlar çıkabilir. Ancak sıfır sandık motor aldığınızda aracınız fabrikadan yeni çıkmış gibi performans verir ve garantilidir. Uzun vadede sıfır motor, revizyondan çok daha ekonomiktir."
-            },
-            {
-                id: 3,
-                title: "Motor Alırken Nelere Dikkat Edilmeli?",
-                summary: "Sıfır motor satın alırken faturaya, garantiye ve ürünün orijinal olup olmadığına dikkat edin.",
-                img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80",
-                content: "Piyasada çıkma veya toplanmış motorlar sıfır adıyla satılabilmektedir. Motor alırken muhakkak resmi faturalı, motor numarası ruhsata işlenebilir ve orijinal kutusunda/paletinde olduğuna dikkat edilmelidir. Güvenilir firmalardan alışveriş yapmak mağduriyeti önler."
-            }
+            { id: 1, title: "Hyundai Motor Neden Değişir?", summary: "Araç motorlarının ömrünü tamamlaması veya ağır hasar alması durumunda motor değişimi gerekebilir...", img: "https://images.unsplash.com/photo-1625047509168-a7026f36de04?auto=format&fit=crop&w=600&q=80", content: "Motor değişiminin başlıca sebepleri arasında yağsız kalma, hararet veya triger kopması gibi ağır mekanik arızalar gelir. Revizyonun kurtarmadığı durumlarda sıfır sandık motor almak çok daha uzun ömürlü ve güvenilir bir çözümdür." },
+            { id: 2, title: "Sıfır Motor mu Revizyon mu?", summary: "Arızalı motoru tamir ettirmek ile sıfırını almak arasındaki farklar nelerdir?", img: "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=600&q=80", content: "Revizyon işlemi, ustanın el işçiliğine bağlıdır ve zamanla eski parçalardan kaynaklı yeni sorunlar çıkabilir. Ancak sıfır sandık motor aldığınızda aracınız fabrikadan yeni çıkmış gibi performans verir ve garantilidir." },
+            { id: 3, title: "Motor Alırken Nelere Dikkat Edilmeli?", summary: "Sıfır motor satın alırken faturaya, garantiye ve ürünün orijinal olup olmadığına dikkat edin.", img: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=600&q=80", content: "Piyasada çıkma veya toplanmış motorlar sıfır adıyla satılabilmektedir. Motor alırken muhakkak resmi faturalı, motor numarası ruhsata işlenebilir ve orijinal kutusunda olduğuna dikkat edilmelidir." }
         ];
 
-        // --- FONKSİYONLAR ---
+        // --- 5. RENDER VE ROUTING MANTIĞI ---
+        function renderCards(dataArray, containerId, type) {
+            const container = document.getElementById(containerId);
+            container.innerHTML = dataArray.map(item => `
+                <div class="card" onclick="openDetail(${item.id}, '${type}')">
+                    <img src="${item.img}" alt="${item.name || item.title}">
+                    <div class="card-body">
+                        <h3 class="card-title">${item.name || item.title}</h3>
+                        <p class="card-desc">${item.desc || item.summary}</p>
+                        <span class="card-link">${type === 'product' ? 'Detayları İncele' : 'Devamını Oku'} <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            `).join('');
+        }
 
-        // Sayfa Değiştirme (Routing)
+        function filterEngines() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = engines.filter(e => e.name.toLowerCase().includes(query) || e.compatible.toLowerCase().includes(query));
+            renderCards(filtered, 'all-engines', 'product');
+        }
+
         function navigateTo(pageId) {
-            // Tüm sayfaları gizle
-            document.querySelectorAll('.page-section').forEach(section => {
-                section.classList.remove('active');
-            });
-            // İstenilen sayfayı göster
+            document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
             document.getElementById(pageId).classList.add('active');
-            // Sayfanın en üstüne kaydır
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Ürün Detay Sayfasını Açma
-        function openProduct(id) {
-            const product = engines.find(e => e.id === id);
-            const content = `
-                <div class="detail-img">
-                    <img src="${product.img}" alt="${product.name}">
-                </div>
-                <div class="detail-info">
-                    <h2>${product.name}</h2>
-                    <p>${product.desc}</p>
-                    <div class="tech-specs">
-                        <h4><i class="fa-solid fa-car"></i> Uyumlu Araçlar:</h4>
-                        <p style="margin-bottom:15px; color:var(--text-dark);">${product.compatible}</p>
-                        <h4><i class="fa-solid fa-wrench"></i> Teknik Bilgiler:</h4>
-                        <ul>
-                            ${product.tech.map(t => `<li>${t}</li>`).join('')}
-                        </ul>
-                    </div>
-                    <div style="display:flex; gap:10px; margin-top:30px;">
-                        <a href="tel:05537383806" class="btn btn-call"><i class="fa-solid fa-phone"></i> Hemen Ara</a>
-                        <a href="https://wa.me/905537383806?text=Merhaba, ${encodeURIComponent(product.name)} hakkında bilgi ve fiyat almak istiyorum." target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> Whatsapp İle Sor</a>
-                    </div>
-                </div>
-            `;
-            document.getElementById('product-content').innerHTML = content;
-            navigateTo('product-detail');
-        }
-
-        // Blog Detay Sayfasını Açma
-        function openBlog(id) {
-            const blog = blogs.find(b => b.id === id);
-            const content = `
-                <img src="${blog.img}" alt="${blog.title}" style="width:100%; height:400px; object-fit:cover; border-radius:10px; margin-bottom:30px;">
-                <h2 style="color:var(--hyundai-blue); font-size:36px; margin-bottom:20px;">${blog.title}</h2>
-                <p style="font-size:18px; line-height:1.8;">${blog.content}</p>
-                <div style="margin-top:40px;">
-                    <button onclick="navigateTo('blog')" class="btn" style="background:var(--metallic-gray); color:white;"><i class="fa-solid fa-arrow-left"></i> Bloglara Dön</button>
-                </div>
-            `;
-            document.getElementById('blog-content').innerHTML = content;
-            navigateTo('blog-detail');
-        }
-
-        // Sayfa Yüklendiğinde İçerikleri Oluştur
-        window.onload = () => {
-            // Motor Kartlarını Oluştur (Ana Sayfa ve Motorlar Sayfası için)
-            let engineCardsHtml = engines.map(engine => `
-                <div class="card" onclick="openProduct(${engine.id})">
-                    <img src="${engine.img}" alt="${engine.name}">
-                    <div class="card-body">
-                        <h3 class="card-title">${engine.name}</h3>
-                        <p class="card-desc">${engine.desc}</p>
-                        <span style="color:var(--hyundai-light-blue); font-weight:bold;">Detayları İncele <i class="fa-solid fa-arrow-right"></i></span>
-                    </div>
-                </div>
-            `).join('');
             
-            document.getElementById('featured-engines').innerHTML = engineCardsHtml;
-            document.getElementById('all-engines').innerHTML = engineCardsHtml;
+            // Menü aktiflik durumu
+            document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+            const activeLink = Array.from(document.querySelectorAll('nav a')).find(a => a.getAttribute('onclick').includes(pageId));
+            if(activeLink) activeLink.classList.add('active');
 
-            // Blog Kartlarını Oluştur
-            let blogCardsHtml = blogs.map(blog => `
-                <div class="card" onclick="openBlog(${blog.id})">
-                    <img src="${blog.img}" alt="${blog.title}">
-                    <div class="card-body">
-                        <h3 class="card-title">${blog.title}</h3>
-                        <p class="card-desc">${blog.summary}</p>
-                        <span style="color:var(--hyundai-light-blue); font-weight:bold;">Devamını Oku <i class="fa-solid fa-book-open"></i></span>
-                    </div>
-                </div>
-            `).join('');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            reObserveElements();
+        }
 
-            document.getElementById('blog-list').innerHTML = blogCardsHtml;
-        };
+        function openDetail(id, type) {
+            if (type === 'product') {
+                const product = engines.find(e => e.id === id);
+                document.getElementById('product-content').innerHTML = `
+                    <div class="detail-img animate-up visible"><img src="${product.img}" alt="${product.name}"></div>
+                    <div class="detail-info animate-up visible">
+                        <h2>${product.name}</h2>
+                        <p style="font-size:18px; color:var(--text-light);">${product.desc}</p>
+                        <div class="tech-specs">
+                            <h4><i class="fa-solid fa-car"></i> Uyumlu Araçlar:</h4>
+                            <p style="margin-bottom:20px; font-weight:600;">${product.compatible}</p>
+                            <h4><i class="fa-solid fa-wrench"></i> Teknik Özellikler:</h4>
+                            <ul>${product.tech.map(t => `<li><i class="fa-solid fa-circle-check"></i> ${t}</li>`).join('')}</ul>
+                        </div>
+                        <div style="display:flex; gap:15px; margin-top:20px;">
+                            <a href="tel:05537383806" class="btn btn-call"><i class="fa-solid fa-phone"></i> Hemen Ara</a>
+                            <a href="https://wa.me/905537383806?text=Merhaba, ${encodeURIComponent(product.name)} için bilgi almak istiyorum." target="_blank" class="btn btn-wa"><i class="fa-brands fa-whatsapp"></i> Whatsapp Sor</a>
+                        </div>
+                    </div>`;
+                navigateTo('product-detail');
+            } else {
+                const blog = blogs.find(b => b.id === id);
+                document.getElementById('blog-content').innerHTML = `
+                    <img src="${blog.img}" alt="${blog.title}" style="width:100%; height:450px; object-fit:cover; border-radius:20px; margin-bottom:40px;" class="animate-up visible">
+                    <h2 style="color:var(--hyundai-blue); font-size:42px; margin-bottom:25px;" class="animate-up visible">${blog.title}</h2>
+                    <p style="font-size:18px; line-height:1.9; color:var(--text-dark);" class="animate-up visible">${blog.content}</p>
+                    <button onclick="navigateTo('blog')" class="btn" style="background:var(--hyundai-blue); color:white; margin-top:40px; align-self:flex-start;"><i class="fa-solid fa-arrow-left"></i> Bloglara Dön</button>
+                `;
+                navigateTo('blog-detail');
+            }
+        }
+
+        // Başlangıçta Çalıştır
+        renderCards(engines, 'featured-engines', 'product');
+        renderCards(engines, 'all-engines', 'product');
+        renderCards(blogs, 'blog-list', 'blog');
+        reObserveElements();
     </script>
 </body>
 </html>
