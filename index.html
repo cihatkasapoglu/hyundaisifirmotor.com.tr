@@ -1,350 +1,124 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hyundai sıfır motor | cihat hyundai sandık motor merkezi</title>
-    <meta name="description" content="türkiye'nin tüm şehirlerine hyundai ve kia sıfır sandık motor gönderimi. cihat hyundai güvencesiyle aradığınız motoru hemen bulun ve whatsapp üzerinden sipariş verin.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #002c5f; /* Hyundai Blue */
-            --secondary-color: #e63946;
-            --bg-color: #f8f9fa;
-            --card-bg: #ffffff;
-            --text-dark: #212529;
-            --text-muted: #6c757d;
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-
-        /* Header & Search */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .logo-area h1 {
-            font-weight: 800;
-            font-size: 1.5rem;
-            letter-spacing: -0.5px;
-            text-transform: lowercase;
-        }
-
-        .logo-area span {
-            font-size: 0.85rem;
-            font-weight: 300;
-            opacity: 0.8;
-            text-transform: lowercase;
-        }
-
-        .search-container {
-            flex-grow: 1;
-            max-width: 600px;
-            position: relative;
-        }
-
-        .search-container input {
-            width: 100%;
-            padding: 0.8rem 1.5rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            outline: none;
-            box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        /* SEO Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #111 0%, #2a2a2a 100%);
-            color: white;
-            padding: 4rem 5%;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 800;
-            text-transform: lowercase;
-        }
-
-        .hero p {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            color: #ddd;
-            font-weight: 300;
-        }
-
-        /* Grid Layout */
-        .container {
-            padding: 3rem 5%;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        /* Product Cards */
-        .card {
-            background-color: var(--card-bg);
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: var(--transition);
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #eee;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-bottom: 1px solid #eee;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card-title {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            color: var(--primary-color);
-            text-transform: lowercase;
-        }
-
-        .btn-whatsapp {
-            margin-top: auto;
-            background-color: #25D366;
-            color: white;
-            text-decoration: none;
-            padding: 0.8rem;
-            border-radius: var(--border-radius);
-            text-align: center;
-            font-weight: 600;
-            transition: var(--transition);
-            display: inline-block;
-            width: 100%;
-            text-transform: lowercase;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: #1ebe57;
-        }
-
-        /* Contact Bar */
-        .contact-bar {
-            background-color: #111;
-            color: white;
-            text-align: center;
-            padding: 2rem 5%;
-        }
-
-        .contact-bar h3 {
-            margin-bottom: 1rem;
-            text-transform: lowercase;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            color: #ccc;
-            font-size: 0.9rem;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #000;
-            color: #666;
-            text-align: center;
-            padding: 1.5rem 5%;
-            font-size: 0.85rem;
-        }
-
-        footer a {
-            color: #888;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        .no-results {
-            text-align: center;
-            grid-column: 1 / -1;
-            padding: 3rem;
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            text-transform: lowercase;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .hero h2 {
-                font-size: 1.8rem;
-            }
-            .contact-info {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyundai Sıfır Motor | Cihat Hyundai</title>
+<meta name="description" content="Hyundai sıfır sandık motor satışında Türkiye geneli gönderim. G4FC, G4FG, G4FJ, G4LA, G4LC, G4FD motorlar stokta. Cihat Hyundai.">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Poppins;background:#0b1220;color:#fff}
+header{padding:30px 20px;text-align:center;background:linear-gradient(135deg,#020617,#0f172a)}
+header h1{margin:0;font-size:32px}
+header p{opacity:.7}
+.search{margin-top:20px}
+.search input{width:95%;max-width:600px;padding:14px;border-radius:40px;border:none;font-size:16px}
+.container{padding:30px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
+.card{background:#020617;border-radius:20px;overflow:hidden;transition:.3s;cursor:pointer}
+.card:hover{transform:translateY(-5px) scale(1.02)}
+.card img{width:100%;height:200px;object-fit:cover}
+.card-content{padding:15px}
+.card-content h3{margin:0;font-size:18px}
+.btn{display:inline-block;margin-top:12px;padding:10px 15px;background:#22c55e;color:#000;border-radius:10px;text-decoration:none;font-weight:600}
+.page{display:none;padding:30px}
+.active{display:block}
+.back{margin-bottom:20px;display:inline-block;cursor:pointer;color:#22c55e}
+footer{background:#020617;text-align:center;padding:30px;margin-top:40px;font-size:14px}
+@media(max-width:600px){header h1{font-size:22px}}
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="logo-area">
-            <h1>hyundaisifirmotor.com</h1>
-            <span>cihat hyundai kuruluşu</span>
-        </div>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="motor kodu veya model ara (örn: g4fc, i30)...">
-        </div>
-    </header>
+<header>
+<h1>Hyundai Sıfır Motor</h1>
+<p>Cihat Hyundai | Türkiye Geneli Gönderim</p>
+<div class="search">
+<input type="text" id="searchInput" placeholder="Motor kodu veya araç ara (örn: G4FD, i20, Tucson)">
+</div>
+</header>
 
-    <section class="hero">
-        <h2>tüm şehirlere hyundai ve kia sıfır motor gönderimi</h2>
-        <p>cihat hyundai güvencesiyle aradığınız motor kodlarına sahip sandık motorları sitemizde inceleyebilir, detaylı bilgi ve doğrudan sipariş için whatsapp hattımızdan uzman ekibimize anında ulaşabilirsiniz. türkiye'nin her noktasına güvenli kargo sağlıyoruz.</p>
-    </section>
+<div class="container" id="listPage">
+<h2>Stoklarımız</h2>
+<div class="grid" id="productGrid"></div>
+</div>
 
-    <main class="container">
-        <div class="product-grid" id="productGrid">
-            </div>
-    </main>
+<div id="detailPage" class="page"></div>
 
-    <section class="contact-bar">
-        <h3>bize ulaşın</h3>
-        <div class="contact-info">
-            <span>adres: ostim osb mah. ayyıldız sanayi sitesi 1126. cad. no:14 yenimahalle / ankara</span>
-            <span>telefon: 0553 738 38 06</span>
-            <span>telefon: 0534 844 18 61</span>
-        </div>
-    </section>
+<footer>
+<p>Adres: OSTİM OSB Mah. Ayyıldız Sanayi Sitesi 1126. Cad. No:14 Yenimahalle / Ankara</p>
+<p>Telefon: 0553 738 38 06 - 0534 844 18 61</p>
+<p>© Cihat Hyundai</p>
+<p>Bu site hyundaisifirmotor.com.tr adına Nokta Sosyal Medya tarafından hazırlanmıştır.</p>
+<p>instagram.com/noktasosyalmedya</p>
+</footer>
 
-    <footer>
-        <p>bu site hyundaisifirmotor.com adına nokta sosyal medya tarafından hazırlanmıştır. <a href="https://instagram.com/noktasosyalmedya" target="_blank" rel="noopener noreferrer">instagram.com/noktasosyalmedya</a></p>
-    </footer>
+<script>
+const products = [
+{img:"G4FC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4fc-sandik-motor.JPEG",name:"G4FC Motor - Accent Blue"},
+{img:"G4FC-sifir-sandik-motor-hyundai-i30-sifir-sandik-motor-hyundai-i30-g4fc-sandik-motor.JPEG",name:"G4FC Motor - i30"},
+{img:"G4FC-sifir-sandik-motor-kia-ceed-sifir-sandik-motor-kia-ceed-g4fc-sandik-motor.JPEG",name:"G4FC Motor - Ceed"},
+{img:"G4FG SIFIR MOTOR - ELENTRA G4FG MOTOR - ELENTRA SIFIR MOTOR.JPEG",name:"G4FG Motor - Elantra"},
+{img:"G4FG-sifir-sandik-motor-hyundai-elantra-G4FG-motor-hyundai-elantra-g4fg-sifir-sandik-motor.JPEG",name:"G4FG Motor - Elantra 2"},
+{img:"G4FJ MOTOR - G4FJ SIFIR MOTOR - TUCSON SIFIR MOTOR -TUCSON MOTOR.JPEG",name:"G4FJ Motor - Tucson"},
+{img:"G4FJ-sifir-sandik-motor-kia-sportage-sifir-sandik-motor-sportage-g4fj-sandik-motor.jpeg",name:"G4FJ Motor - Sportage"},
+{img:"G4FJ-tucson-sifir-sandik-motor-hyundai-tucson-g4fj-sifir-sandik-motor.jpeg",name:"G4FJ Motor - Tucson 2"},
+{img:"G4LA-sifir-sandik-motor-hyundai-i10-sifir-sandik-motor-hyundai-i10-g4la-sifir-sandik-motor-˜10-sifir-motor.JPEG",name:"G4LA Motor - i10"},
+{img:"G4LA-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4la-sifir-sandik-motor.JPEG",name:"G4LA Motor - i20"},
+{img:"G4LC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4lc-sifir-sandik-motor.JPEG",name:"G4LC Motor - Accent"},
+{img:"G4LC-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4lc-sifir-sandik-motor.JPEG",name:"G4LC Motor - i20"},
+{img:"G4LC-sifir-sandik-motor-kia-rio-sifir-sandik-motor-kia-rio-g4lc-sifir-sandik-motor.JPEG",name:"G4LC Motor - Rio"},
+{img:"hyundai-elantra-sifir-motor-G4FD-motor-2010-2015-g4fd-motor.jpeg",name:"G4FD Motor - Elantra"},
+{img:"hyundai-i30-sifir-motor-G4FD-sandik-motor-2011-2017-g4fd-motor.jpeg",name:"G4FD Motor - i30"},
+{img:"hyundai-ix35-sandik-motor-hyundai-ix35-sifir-sandik-motor-G4FD-motor-hyundai-ix35-g4fd-sandik-motor.jpeg",name:"G4FD Motor - ix35"},
+{img:"hyundai-tucson-sifir-motor-sandik-motor-G4FD-motor-g4fd-sandik-motor.jpeg",name:"G4FD Motor - Tucson"},
+{img:"kia-ceed-sifir-sandik-motor-G4FD-motor-ceed-g4fd-sifir-sandik-motor.jpeg",name:"G4FD Motor - Ceed"},
+{img:"kia-cerato-sifir-sandik-motor-G4FD-motor-cerato-sandik-motor.jpeg",name:"G4FD Motor - Cerato"},
+{img:"kia-rio-sifir-sandik-motor-kia-rio-3-sifir-sandik-motor-kia-rio-G4FD-motor-kia-rio-g4fd-sifir-motor.jpeg",name:"G4FD Motor - Rio"},
+{img:"kia-soul-sifir-sandik-motor-kia-soul-G4FD-sifir-motor-g4fd-sandik-motor.jpeg",name:"G4FD Motor - Soul"},
+{img:"kia-sportage-sifir-sandik-motor-kia-sportage-G4FD-motor-sportage-sifir-g4fd-motor.jpeg",name:"G4FD Motor - Sportage"}
+];
 
-    <script>
-        // Ürün verileri (Dosya adlarından temizlenmiş başlıklarla)
-        const products = [
-            { img: "G4FC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4fc-sandik-motor.JPEG", title: "hyundai accent blue g4fc sıfır motor" },
-            { img: "G4FC-sifir-sandik-motor-hyundai-i30-sifir-sandik-motor-hyundai-i30-g4fc-sandik-motor.JPEG", title: "hyundai i30 g4fc sıfır motor" },
-            { img: "G4FC-sifir-sandik-motor-kia-ceed-sifir-sandik-motor-kia-ceed-g4fc-sandik-motor.JPEG", title: "kia ceed g4fc sıfır motor" },
-            { img: "G4FG SIFIR MOTOR - ELENTRA G4FG MOTOR - ELENTRA SIFIR MOTOR.JPEG", title: "hyundai elantra g4fg sıfır motor" },
-            { img: "G4FG-sifir-sandik-motor-hyundai-elantra-G4FG-motor-hyundai-elantra-g4fg-sifir-sandik-motor.JPEG", title: "hyundai elantra g4fg sandık motor" },
-            { img: "G4FJ MOTOR - G4FJ SIFIR MOTOR - TUCSON SIFIR MOTOR -TUCSON MOTOR.JPEG", title: "hyundai tucson g4fj sıfır motor" },
-            { img: "G4FJ-sifir-sandik-motor-kia-sportage-sifir-sandik-motor-sportage-g4fj-sandik-motor.jpeg", title: "kia sportage g4fj sıfır motor" },
-            { img: "G4FJ-tucson-sifir-sandik-motor-hyundai-tucson-g4fj-sifir-sandik-motor.jpeg", title: "hyundai tucson g4fj sandık motor" },
-            { img: "G4LA-sifir-sandik-motor-hyundai-i10-sifir-sandik-motor-hyundai-i10-g4la-sifir-sandik-motor-˜10-sifir-motor.JPEG", title: "hyundai i10 g4la sıfır motor" },
-            { img: "G4LA-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4la-sifir-sandik-motor.JPEG", title: "hyundai i20 g4la sıfır motor" },
-            { img: "G4LC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4lc-sifir-sandik-motor.JPEG", title: "hyundai accent blue g4lc sıfır motor" },
-            { img: "G4LC-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4lc-sifir-sandik-motor.JPEG", title: "hyundai i20 g4lc sıfır motor" },
-            { img: "G4LC-sifir-sandik-motor-kia-rio-sifir-sandik-motor-kia-rio-g4lc-sifir-sandik-motor.JPEG", title: "kia rio g4lc sıfır motor" },
-            { img: "hyundai-elantra-sifir-motor-G4FD-motor-2010-2015-g4fd-motor.jpeg", title: "hyundai elantra g4fd sıfır motor" },
-            { img: "hyundai-i30-sifir-motor-G4FD-sandik-motor-2011-2017-g4fd-motor.jpeg", title: "hyundai i30 g4fd sandık motor" },
-            { img: "hyundai-i30-sifir-sandik-motor-hyundai-i30-G4FD-motor-i30-g4fd-sifir-motor.jpeg", title: "hyundai i30 g4fd sıfır motor" },
-            { img: "hyundai-ix35-sandik-motor-hyundai-ix35-sifir-sandik-motor-G4FD-motor-hyundai-ix35-g4fd-sandik-motor.jpeg", title: "hyundai ix35 g4fd sıfır motor" },
-            { img: "hyundai-tucson-sifir-motor-sandik-motor-G4FD-motor-g4fd-sandik-motor.jpeg", title: "hyundai tucson g4fd sıfır motor" },
-            { img: "kia-ceed-2-sifir-motor-G4FD-motor-2012-2018-g4fd-sandik-motor.jpeg", title: "kia ceed g4fd sıfır motor" },
-            { img: "kia-ceed-sifir-sandik-motor-G4FD-motor-ceed-g4fd-sifir-sandik-motor.jpeg", title: "kia ceed g4fd sandık motor" },
-            { img: "kia-cerato-sifir-sandik-motor-G4FD-motor-cerato-sandik-motor.jpeg", title: "kia cerato g4fd sıfır motor" },
-            { img: "kia-rio-sifir-sandik-motor-kia-rio-3-sifir-sandik-motor-kia-rio-G4FD-motor-kia-rio-g4fd-sifir-motor.jpeg", title: "kia rio g4fd sıfır motor" },
-            { img: "kia-soul-sifir-sandik-motor-kia-soul-G4FD-sifir-motor-g4fd-sandik-motor.jpeg", title: "kia soul g4fd sıfır motor" },
-            { img: "kia-sportage-sifir-sandik-motor-kia-sportage-G4FD-motor-sportage-sifir-g4fd-motor.jpeg", title: "kia sportage g4fd sıfır motor" }
-        ];
+const grid = document.getElementById("productGrid");
+const detailPage = document.getElementById("detailPage");
 
-        const grid = document.getElementById('productGrid');
-        const searchInput = document.getElementById('searchInput');
-        const whatsappPhone = "905537383806"; 
+function renderProducts(list){
+ grid.innerHTML="";
+ list.forEach(p=>{
+  const div=document.createElement("div");
+  div.className="card";
+  div.innerHTML=`<img src="${p.img}"><div class="card-content"><h3>${p.name}</h3></div>`;
+  div.onclick=()=>openDetail(p);
+  grid.appendChild(div);
+ });
+}
 
-        // Ürünleri render etme fonksiyonu
-        function renderProducts(items) {
-            grid.innerHTML = '';
-            
-            if (items.length === 0) {
-                grid.innerHTML = '<div class="no-results">arama kriterlerinize uygun motor bulunamadı.</div>';
-                return;
-            }
+function openDetail(p){
+ document.getElementById("listPage").style.display="none";
+ detailPage.classList.add("active");
+ detailPage.innerHTML=`
+ <div class="back" onclick="goBack()">← Geri</div>
+ <h2>${p.name}</h2>
+ <img src="${p.img}" style="width:100%;max-width:500px;border-radius:15px">
+ <p>Hyundai sıfır sandık motor. Türkiye geneli kargo. Cihat Hyundai güvencesi.</p>
+ <a class="btn" href="tel:05537383806">Hemen Ara</a>
+ `;
+}
 
-            items.forEach(product => {
-                const card = document.createElement('div');
-                card.className = 'card';
-                
-                const whatsappMessage = encodeURIComponent(`merhaba, ${product.title} hakkında bilgi almak istiyorum.`);
-                const whatsappLink = `https://wa.me/${whatsappPhone}?text=${whatsappMessage}`;
+function goBack(){
+ detailPage.classList.remove("active");
+ document.getElementById("listPage").style.display="block";
+}
 
-                card.innerHTML = `
-                    <img src="${product.img}" alt="${product.title}" class="card-img" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiNlZWVlZWUiLz48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzk5OSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiPmdvZXJzZWwgeXVla2xlbmVtZWRpPC90ZXh0Pjwvc3ZnPg=='">
-                    <div class="card-content">
-                        <h3 class="card-title">${product.title}</h3>
-                        <a href="${whatsappLink}" target="_blank" class="btn-whatsapp">whatsapp'tan bilgi al</a>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
+renderProducts(products);
 
-        // İlk yükleme
-        renderProducts(products);
+document.getElementById("searchInput").addEventListener("keyup",function(){
+ const val=this.value.toLowerCase();
+ const filtered=products.filter(p=>p.name.toLowerCase().includes(val));
+ renderProducts(filtered);
+});
+</script>
 
-        // Arama filtresi
-        searchInput.addEventListener('input', (e) => {
-            const searchTerm = e.target.value.toLowerCase().trim();
-            const filtered = products.filter(product => 
-                product.title.toLowerCase().includes(searchTerm) || 
-                product.img.toLowerCase().includes(searchTerm)
-            );
-            renderProducts(filtered);
-        });
-    </script>
 </body>
 </html>
