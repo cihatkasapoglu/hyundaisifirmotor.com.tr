@@ -1,122 +1,1015 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hyundai Sıfır Motor | Cihat Hyundai</title>
-<meta name="description" content="Hyundai sıfır sandık motor satışında Türkiye geneli gönderim. G4FC, G4FG, G4FJ, G4LA, G4LC, G4FD motorlar stokta. Cihat Hyundai.">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cihat Hyundai – Sıfır Sandık Motor | Ankara OSTİM</title>
+<meta name="description" content="Hyundai ve Kia sıfır sandık motor tedariği. G4FC, G4FD, G4FJ, G4LC motor kodları. Ankara OSTİM merkezli, Türkiye geneline kargo."/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Poppins;background:#0b1220;color:#fff}
-header{padding:30px 20px;text-align:center;background:linear-gradient(135deg,#020617,#0f172a)}
-header h1{margin:0;font-size:32px}
-header p{opacity:.7}
-.search{margin-top:20px}
-.search input{width:95%;max-width:600px;padding:14px;border-radius:40px;border:none;font-size:16px}
-.container{padding:30px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
-.card{background:#020617;border-radius:20px;overflow:hidden;transition:.3s;cursor:pointer}
-.card:hover{transform:translateY(-5px) scale(1.02)}
-.card img{width:100%;height:200px;object-fit:cover}
-.card-content{padding:15px}
-.card-content h3{margin:0;font-size:18px}
-.btn{display:inline-block;margin-top:12px;padding:10px 15px;background:#22c55e;color:#000;border-radius:10px;text-decoration:none;font-weight:600}
-.page{display:none;padding:30px}
-.active{display:block}
-.back{margin-bottom:20px;display:inline-block;cursor:pointer;color:#22c55e}
-footer{background:#020617;text-align:center;padding:30px;margin-top:40px;font-size:14px}
-@media(max-width:600px){header h1{font-size:22px}}
+:root {
+  --primary: #001839;
+  --primary-container: #002c5f;
+  --secondary: #5b5f63;
+  --tertiary: #3b0006;
+  --tertiary-container: #620010;
+  --surface: #f7f9fc;
+  --surface-container-low: #f2f4f7;
+  --surface-container-lowest: #ffffff;
+  --surface-bright: #f7f9fc;
+  --on-surface: #191c1e;
+  --on-surface-variant: #43474f;
+  --outline: #747780;
+  --outline-variant: #c4c6d1;
+  --on-primary: #ffffff;
+  --on-primary-container: #7695ce;
+  --error: #ba1a1a;
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--surface);
+  color: var(--on-surface);
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-headline { font-family: 'Manrope', sans-serif; }
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* ── HEADER ── */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(247, 249, 252, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.3s;
+}
+.site-header.scrolled {
+  box-shadow: 0 4px 24px rgba(0, 24, 57, 0.04);
+}
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.site-logo .material-symbols-outlined {
+  color: var(--primary);
+  font-size: 26px;
+}
+.site-logo span:last-child {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.header-actions {
+  display: flex;
+  gap: 4px;
+}
+.header-actions button {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: color 0.2s, background 0.2s;
+}
+.header-actions button:hover {
+  color: var(--tertiary-container);
+  background: rgba(98, 0, 16, 0.06);
+}
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--primary) 0%, var(--primary-container) 100%);
+  padding: 48px 24px 64px;
+  color: var(--on-primary);
+}
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+  pointer-events: none;
+  filter: grayscale(30%);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 480px;
+}
+.hero-badge {
+  display: inline-block;
+  padding: 5px 14px;
+  margin-bottom: 20px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, var(--tertiary) 0%, var(--tertiary-container) 100%);
+  color: #ffb3b1;
+  border-radius: 2px;
+}
+.hero h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(2rem, 7vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  margin-bottom: 16px;
+}
+.hero p {
+  color: var(--on-primary-container);
+  font-size: 14px;
+  line-height: 1.7;
+  max-width: 380px;
+  margin-bottom: 28px;
+}
+.hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+}
+.hero-chip .material-symbols-outlined {
+  font-size: 18px;
+  color: #ff5c62;
+}
+
+/* ── SEARCH ── */
+.search-section {
+  padding: 0 20px;
+  margin-top: -28px;
+  position: relative;
+  z-index: 20;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--surface-container-lowest);
+  border-radius: 0.75rem;
+  box-shadow: 0 8px 32px rgba(0, 24, 57, 0.06);
+  padding: 4px;
+  border: 1px solid rgba(196, 198, 209, 0.2);
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.search-bar:focus-within {
+  box-shadow: 0 8px 40px rgba(0, 24, 57, 0.1);
+  border-color: rgba(196, 198, 209, 0.35);
+}
+.search-bar .material-symbols-outlined {
+  color: var(--outline);
+  margin-left: 16px;
+  font-size: 22px;
+}
+.search-bar input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 14px 12px;
+  font-size: 13px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--on-surface);
+  outline: none;
+}
+.search-bar input::placeholder {
+  color: var(--outline);
+  font-weight: 400;
+}
+.search-btn {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+  color: var(--on-primary);
+  border: none;
+  padding: 12px 22px;
+  border-radius: 0.65rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+.search-btn:hover { opacity: 0.88; }
+.search-btn:active { transform: scale(0.97); }
+
+/* ── PRODUCT LISTING ── */
+.products-section {
+  padding: 40px 20px 0;
+}
+.section-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.section-header h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+.section-header .subtitle {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--secondary);
+  font-weight: 700;
+}
+.products-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ── PRODUCT CARD ── */
+.product-card {
+  background: var(--surface-container-lowest);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+  border-radius: 2px;
+}
+.product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 48px rgba(0, 24, 57, 0.07);
+}
+.product-card__image-wrap {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  background: var(--surface-container-low);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  overflow: hidden;
+}
+.product-card__watermark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  overflow: hidden;
+}
+.product-card__watermark span {
+  font-family: 'Manrope', sans-serif;
+  font-size: 130px;
+  font-weight: 800;
+  color: var(--primary);
+  opacity: 0.04;
+  letter-spacing: -0.05em;
+  user-select: none;
+}
+.product-card__image-wrap img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.12));
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.product-card:hover .product-card__image-wrap img {
+  transform: scale(1.06);
+}
+.product-card__code-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--tertiary-container);
+  z-index: 3;
+  letter-spacing: 0.02em;
+}
+.product-card__stock-indicator {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(8px);
+  border-radius: 100px;
+  z-index: 3;
+}
+.product-card__stock-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16a34a;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.product-card__stock-text {
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #16a34a;
+}
+.product-card__body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.product-card__title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+.product-card__compat {
+  font-size: 12px;
+  color: var(--secondary);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+.product-card__specs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding-top: 16px;
+  background-image: linear-gradient(to right, rgba(196,198,209,0.2) 0%, rgba(196,198,209,0.2) 100%);
+  background-size: 100% 1px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.product-card__spec-label {
+  display: block;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--outline);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.product-card__spec-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--on-surface);
+}
+.product-card__spec-value.highlight {
+  color: var(--tertiary-container);
+}
+.product-card__cta {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+  color: var(--on-primary);
+  border: none;
+  border-radius: 2px;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  text-decoration: none;
+}
+.product-card__cta:hover {
+  background: linear-gradient(135deg, var(--tertiary) 0%, var(--tertiary-container) 100%);
+}
+
+/* ── WHY US SECTION ── */
+.why-section {
+  padding: 48px 20px 0;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+.why-card {
+  background: var(--surface-container-low);
+  padding: 24px 18px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.why-card .material-symbols-outlined {
+  font-size: 28px;
+  color: var(--primary-container);
+}
+.why-card__title {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--primary);
+  letter-spacing: -0.01em;
+}
+.why-card__desc {
+  font-size: 11px;
+  color: var(--secondary);
+  line-height: 1.6;
+}
+
+/* ── SEO CONTENT ── */
+.seo-section {
+  padding: 48px 20px;
+}
+.seo-block {
+  background: var(--surface-container-low);
+  padding: 32px 24px;
+  border-radius: 2px;
+}
+.seo-block h3 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+.seo-block p {
+  font-size: 13px;
+  color: var(--on-surface-variant);
+  line-height: 1.8;
+  margin-bottom: 18px;
+}
+.seo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.seo-tag {
+  display: inline-block;
+  padding: 5px 12px;
+  background: var(--primary);
+  color: rgba(255,255,255,0.8);
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 2px;
+  letter-spacing: 0.02em;
+}
+
+/* ── FOOTER ── */
+.site-footer {
+  background: var(--primary-container);
+  padding: 48px 24px 96px;
+  text-align: center;
+}
+.footer-brand {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.95);
+  margin-bottom: 28px;
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.footer-contact-link:hover {
+  color: #ffb3b1;
+}
+.footer-contact-link .material-symbols-outlined {
+  font-size: 18px;
+}
+.footer-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: rgba(255,255,255,0.5);
+  font-size: 12px;
+  margin-bottom: 32px;
+  line-height: 1.5;
+}
+.footer-address .material-symbols-outlined {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.footer-divider {
+  width: 40px;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin: 0 auto 24px;
+}
+.footer-legal {
+  font-size: 10px;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.footer-credit {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  color: rgba(255,255,255,0.3);
+}
+.footer-credit strong {
+  color: rgba(255,255,255,0.6);
+  font-weight: 700;
+}
+
+/* ── BOTTOM NAV ── */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 -4px 24px rgba(0, 24, 57, 0.04);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 12px;
+  gap: 2px;
+  transition: color 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-item .material-symbols-outlined {
+  font-size: 24px;
+  transition: transform 0.2s;
+}
+.nav-item:active .material-symbols-outlined {
+  transform: scale(0.88);
+}
+.nav-item__label {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+.nav-item--active {
+  color: var(--tertiary-container);
+}
+.nav-item--inactive {
+  color: var(--outline);
+}
+.nav-item--inactive:hover {
+  color: var(--primary);
+}
+
+/* ── CTA BANNER ── */
+.cta-banner {
+  margin: 0 20px;
+  padding: 28px 24px;
+  background: linear-gradient(135deg, var(--tertiary) 0%, var(--tertiary-container) 100%);
+  border-radius: 2px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.cta-banner h4 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffdad8;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  position: relative;
+}
+.cta-banner p {
+  font-size: 12px;
+  color: rgba(255,179,177,0.8);
+  margin-bottom: 20px;
+  line-height: 1.6;
+  position: relative;
+}
+.cta-banner a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 100px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.2s;
+  position: relative;
+}
+.cta-banner a:hover {
+  background: rgba(255,255,255,0.22);
+}
+.cta-banner a .material-symbols-outlined {
+  font-size: 18px;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-in {
+  animation: fade-up 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+/* ── RESPONSIVE ── */
+@media (min-width: 640px) {
+  .products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .why-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .hero { padding: 64px 40px 80px; }
+  .products-section { padding: 48px 40px 0; }
+  .search-section { padding: 0 40px; }
+  .seo-section { padding: 48px 40px; }
+  .why-section { padding: 48px 40px 0; }
+  .cta-banner { margin: 0 40px; }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 </style>
 </head>
 <body>
 
-<header>
-<h1>Hyundai Sıfır Motor</h1>
-<p>Cihat Hyundai | Türkiye Geneli Gönderim</p>
-<div class="search">
-<input type="text" id="searchInput" placeholder="Motor kodu veya araç ara (örn: G4FD, i20, Tucson)">
-</div>
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="site-header" id="siteHeader">
+  <div class="site-logo">
+    <span class="material-symbols-outlined filled">precision_manufacturing</span>
+    <span>Cihat Hyundai</span>
+  </div>
+  <div class="header-actions">
+    <button aria-label="Ara" onclick="document.getElementById('searchInput').focus()">
+      <span class="material-symbols-outlined">search</span>
+    </button>
+    <button aria-label="Telefon" onclick="window.location.href='tel:05537383806'">
+      <span class="material-symbols-outlined">phone_in_talk</span>
+    </button>
+  </div>
 </header>
 
-<div class="container" id="listPage">
-<h2>Stoklarımız</h2>
-<div class="grid" id="productGrid"></div>
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <img class="hero-bg-img" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcbslwXvo-UrCQ-XL9K9nNMVMiIwbWk0ExAuj1bSykssGOGHuT6hpmEBBUs-669ZJoGto22ioO1AWOke3Xb3i79YlJ482fMH2d5J5wpEpDs6uSn5KjkRTKeZEOoP0a1gw3XQiPlZRYs0xmoE9DF0i-GUIdwV2hZYh6zqD22g7HSEyK01rLrRUNT_FNckhhmyRnSXJwdKZb4t9MqPPceUNu1ki1EkUf0VHtq6_dj-rt6i6-GhrHQEremsDwfTRHwYEAeZznBlyHMek" alt="Motor görseli"/>
+  <div class="hero-content">
+    <span class="hero-badge animate-in">Premium Stock</span>
+    <h2 class="animate-in delay-1">Hyundai &amp; Kia<br/>Sıfır Sandık Motorları</h2>
+    <p class="animate-in delay-2">Türkiye'nin her yerine hızlı ve güvenilir gönderim. Ankara OSTİM merkezli profesyonel tedarik çözümleri.</p>
+    <div class="hero-chips animate-in delay-3">
+      <div class="hero-chip">
+        <span class="material-symbols-outlined">local_shipping</span>
+        Tüm Şehirlere Gönderim
+      </div>
+      <div class="hero-chip">
+        <span class="material-symbols-outlined">verified</span>
+        Fatura Garantili
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SEARCH ═══════════════ -->
+<section class="search-section">
+  <div class="search-bar">
+    <span class="material-symbols-outlined">search</span>
+    <input id="searchInput" type="text" placeholder="Motor Kodu Ara (G4FC, G4FD, G4LC...)"/>
+    <button class="search-btn">Bul</button>
+  </div>
+</section>
+
+<!-- ═══════════════ PRODUCTS ═══════════════ -->
+<section class="products-section">
+  <div class="section-header">
+    <h3 class="font-headline">Stoktaki Motorlar</h3>
+    <span class="subtitle">Hyundai &amp; Kia Sıfır Motor</span>
+  </div>
+
+  <div class="products-grid">
+
+    <!-- ── G4FC ── -->
+    <article class="product-card">
+      <div class="product-card__image-wrap">
+        <div class="product-card__watermark"><span>G4FC</span></div>
+        <div class="product-card__stock-indicator">
+          <span class="product-card__stock-dot"></span>
+          <span class="product-card__stock-text">Stokta</span>
+        </div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE5p4i5PE5MgkB-TtiVl-S79IkyJ0gAizgD6iDhFbY0TJfkZX8V6Tl3VpAZZdOgEa5ECYaPdsjiaj0rOCILHMkdyaYCSFaR_fjNO5tju3uLFDIPbCILq4202T1LybdHZMLFriUpXkb1KtM_xz1z2aIQ7xQ0IVVf-NMuE8d8-yNwYPIiZ2n8BoMX_W_4tx1wrRmcpWqjW1nThNt2P1Lpc5mrbuJauTsOqYKYPjnxpbeWhq_RTYa2Vba1T3M3d1VQQqpoWX_XmUUSV4" alt="G4FC Sıfır Sandık Motor"/>
+        <span class="product-card__code-badge">G4FC</span>
+      </div>
+      <div class="product-card__body">
+        <div>
+          <h4 class="product-card__title">Hyundai i30 G4FC Sıfır Sandık Motor</h4>
+          <p class="product-card__compat">Accent Blue, i30, Ceed Uyumlu</p>
+        </div>
+        <div class="product-card__specs">
+          <div>
+            <span class="product-card__spec-label">Tip</span>
+            <span class="product-card__spec-value">Benzinli</span>
+          </div>
+          <div>
+            <span class="product-card__spec-label">Durum</span>
+            <span class="product-card__spec-value highlight">Sıfır</span>
+          </div>
+        </div>
+        <a href="tel:05537383806" class="product-card__cta">Detayları İncele</a>
+      </div>
+    </article>
+
+    <!-- ── G4FD ── -->
+    <article class="product-card">
+      <div class="product-card__image-wrap">
+        <div class="product-card__watermark"><span>G4FD</span></div>
+        <div class="product-card__stock-indicator">
+          <span class="product-card__stock-dot"></span>
+          <span class="product-card__stock-text">Stokta</span>
+        </div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbIU3cgnH1OBXUwNju9383ziVMIeEWXJISeqnmPB_ty8iSk49K51xvfrqWbnjyEEOJG0GPzt05LDjHyh-C0Rc-qmUaoXoOqO_SoX3vVqEkrazrNBJujBPPw09U8oBo0GOWZ7sSD5LVYMWbV-fV2iOJPbtFurml38YE_tU_650vHRN_d1JPgB8W2S-8nzjsNEHTkbtK3XcCJjRvKa_ljeJSoo1OYAA5dDRUkYWscXGdyx897ipQnMEucHtrUfK0bBjp2SntPcgFS8c" alt="G4FD Sıfır Sandık Motor"/>
+        <span class="product-card__code-badge">G4FD</span>
+      </div>
+      <div class="product-card__body">
+        <div>
+          <h4 class="product-card__title">Hyundai Tucson G4FD Sıfır Sandık Motor</h4>
+          <p class="product-card__compat">Elantra, i30, ix35, Sportage Uyumlu</p>
+        </div>
+        <div class="product-card__specs">
+          <div>
+            <span class="product-card__spec-label">Üretim</span>
+            <span class="product-card__spec-value">G. Kore</span>
+          </div>
+          <div>
+            <span class="product-card__spec-label">Teslimat</span>
+            <span class="product-card__spec-value highlight">Aynı Gün</span>
+          </div>
+        </div>
+        <a href="tel:05537383806" class="product-card__cta">Teklif Al</a>
+      </div>
+    </article>
+
+    <!-- ── G4FJ ── -->
+    <article class="product-card">
+      <div class="product-card__image-wrap">
+        <div class="product-card__watermark"><span>G4FJ</span></div>
+        <div class="product-card__stock-indicator">
+          <span class="product-card__stock-dot"></span>
+          <span class="product-card__stock-text">Stokta</span>
+        </div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOFz9pDiSl4w6eXINEgrqHtc2pFc8c2F4ruqVj7lthbyUA3MV1cR0foOF-q-VXir3bCCrDXFJ6JaA9jCaj8U-RWT8ukCS_h1NKfpVaKF4H1nGxo41Yxtei-BW2YFD-w5Wsv8_Gaicd4fCeDgUQiEu1Cmj7PAnt6BJqAEt-IQWNuLSaG4SF3bqI7k9nrUrk6U5sfrgBd70dKcI9qXjLkflxvMYr5ue0sd1odYLothqWZ-69o2KWnbGDAosi35oyj1YERZlzS7yREDI" alt="G4FJ Turbo Sıfır Motor"/>
+        <span class="product-card__code-badge">G4FJ</span>
+      </div>
+      <div class="product-card__body">
+        <div>
+          <h4 class="product-card__title">Hyundai Sportage G4FJ Turbo Sıfır Motor</h4>
+          <p class="product-card__compat">Tucson, Sportage 1.6 T-GDI Uyumlu</p>
+        </div>
+        <div class="product-card__specs">
+          <div>
+            <span class="product-card__spec-label">Garanti</span>
+            <span class="product-card__spec-value">Fatura Garantili</span>
+          </div>
+          <div>
+            <span class="product-card__spec-label">Konum</span>
+            <span class="product-card__spec-value highlight">Ankara OSTİM</span>
+          </div>
+        </div>
+        <a href="tel:05537383806" class="product-card__cta">Hemen Ara</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══════════════ WHY US ═══════════════ -->
+<section class="why-section">
+  <div class="section-header">
+    <h3 class="font-headline">Neden Biz?</h3>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="material-symbols-outlined">verified</span>
+      <span class="why-card__title">Orijinal Parça</span>
+      <span class="why-card__desc">Güney Kore orijinal ithal motorlar</span>
+    </div>
+    <div class="why-card">
+      <span class="material-symbols-outlined">local_shipping</span>
+      <span class="why-card__title">Hızlı Kargo</span>
+      <span class="why-card__desc">Tüm illere aynı gün kargolama</span>
+    </div>
+    <div class="why-card">
+      <span class="material-symbols-outlined">receipt_long</span>
+      <span class="why-card__title">Fatura Garantisi</span>
+      <span class="why-card__desc">Her motor faturalı ve garantili</span>
+    </div>
+    <div class="why-card">
+      <span class="material-symbols-outlined">support_agent</span>
+      <span class="why-card__title">Teknik Destek</span>
+      <span class="why-card__desc">Montaj öncesi ve sonrası danışmanlık</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA BANNER ═══════════════ -->
+<div style="padding: 48px 0 0;">
+  <div class="cta-banner">
+    <h4>Aradığınız Motoru Bulamadınız mı?</h4>
+    <p>Bizi hemen arayın, size özel teklif hazırlayalım.</p>
+    <a href="tel:05537383806">
+      <span class="material-symbols-outlined">phone_in_talk</span>
+      0553 738 38 06
+    </a>
+  </div>
 </div>
 
-<div id="detailPage" class="page"></div>
+<!-- ═══════════════ SEO CONTENT ═══════════════ -->
+<section class="seo-section">
+  <div class="seo-block">
+    <h3>Sandık Motor Ankara</h3>
+    <p>
+      Cihat Hyundai olarak, Hyundai ve Kia marka araçlarınız için orijinal ve ithal sıfır sandık motor tedariği sağlıyoruz. 
+      <strong>G4FC, G4LC, G4FD, G4FJ</strong> gibi popüler motor seçeneklerimiz Ankara OSTİM depomuzda sevkiyata hazır beklemektedir. 
+      Türkiye geneline güvenli kargo ile gönderim yapıyoruz.
+    </p>
+    <div class="seo-tags">
+      <span class="seo-tag">Accent Blue Motor</span>
+      <span class="seo-tag">i30 Sıfır Motor</span>
+      <span class="seo-tag">Tucson Sandık Motor</span>
+      <span class="seo-tag">Sportage Motor</span>
+      <span class="seo-tag">Kia Ceed Motor</span>
+      <span class="seo-tag">Elantra Motor</span>
+    </div>
+  </div>
+</section>
 
-<footer>
-<p>Adres: OSTİM OSB Mah. Ayyıldız Sanayi Sitesi 1126. Cad. No:14 Yenimahalle / Ankara</p>
-<p>Telefon: 0553 738 38 06 - 0534 844 18 61</p>
-<p>© Cihat Hyundai</p>
-<p>Bu site hyundaisifirmotor.com.tr adına Nokta Sosyal Medya tarafından hazırlanmıştır.</p>
-<p>instagram.com/noktasosyalmedya</p>
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="site-footer">
+  <div class="footer-brand">Cihat Hyundai</div>
+  <div class="footer-contacts">
+    <a href="tel:05537383806" class="footer-contact-link">
+      <span class="material-symbols-outlined">phone</span>
+      0553 738 38 06
+    </a>
+    <a href="tel:05348441861" class="footer-contact-link">
+      <span class="material-symbols-outlined">phone</span>
+      0534 844 18 61
+    </a>
+  </div>
+  <div class="footer-address">
+    <span class="material-symbols-outlined">location_on</span>
+    OSTİM OSB Mah. Ayyıldız Sanayi Sitesi 1126. Cad. No:14 Yenimahalle / Ankara
+  </div>
+  <div class="footer-divider"></div>
+  <p class="footer-legal">
+    © 2025 Cihat Hyundai — hyundaisifirmotor.com | Ankara OSTİM. Tüm şehirlere gönderim yapıyoruz.
+  </p>
+  <p class="footer-credit">
+    Bu site hyundaisifirmotor.com adına <strong>Nokta Sosyal Medya</strong> (@noktasosyalmedya) tarafından hazırlanmıştır.
+  </p>
 </footer>
 
+<!-- ═══════════════ BOTTOM NAV ═══════════════ -->
+<nav class="bottom-nav">
+  <button class="nav-item nav-item--active" aria-label="Ana Sayfa">
+    <span class="material-symbols-outlined filled">home</span>
+    <span class="nav-item__label">Ana Sayfa</span>
+  </button>
+  <button class="nav-item nav-item--inactive" aria-label="Motorlar">
+    <span class="material-symbols-outlined">settings_suggest</span>
+    <span class="nav-item__label">Motorlar</span>
+  </button>
+  <button class="nav-item nav-item--inactive" aria-label="Ara" onclick="document.getElementById('searchInput').focus(); window.scrollTo({top: 0, behavior: 'smooth'})">
+    <span class="material-symbols-outlined">search</span>
+    <span class="nav-item__label">Ara</span>
+  </button>
+  <a href="tel:05537383806" class="nav-item nav-item--inactive" aria-label="Ara" style="text-decoration:none;">
+    <span class="material-symbols-outlined">phone_in_talk</span>
+    <span class="nav-item__label">Ara</span>
+  </a>
+</nav>
+
+<!-- ═══════════════ SCRIPTS ═══════════════ -->
 <script>
-const products = [
-{img:"G4FC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4fc-sandik-motor.JPEG",name:"G4FC Motor - Accent Blue"},
-{img:"G4FC-sifir-sandik-motor-hyundai-i30-sifir-sandik-motor-hyundai-i30-g4fc-sandik-motor.JPEG",name:"G4FC Motor - i30"},
-{img:"G4FC-sifir-sandik-motor-kia-ceed-sifir-sandik-motor-kia-ceed-g4fc-sandik-motor.JPEG",name:"G4FC Motor - Ceed"},
-{img:"G4FG SIFIR MOTOR - ELENTRA G4FG MOTOR - ELENTRA SIFIR MOTOR.JPEG",name:"G4FG Motor - Elantra"},
-{img:"G4FG-sifir-sandik-motor-hyundai-elantra-G4FG-motor-hyundai-elantra-g4fg-sifir-sandik-motor.JPEG",name:"G4FG Motor - Elantra 2"},
-{img:"G4FJ MOTOR - G4FJ SIFIR MOTOR - TUCSON SIFIR MOTOR -TUCSON MOTOR.JPEG",name:"G4FJ Motor - Tucson"},
-{img:"G4FJ-sifir-sandik-motor-kia-sportage-sifir-sandik-motor-sportage-g4fj-sandik-motor.jpeg",name:"G4FJ Motor - Sportage"},
-{img:"G4FJ-tucson-sifir-sandik-motor-hyundai-tucson-g4fj-sifir-sandik-motor.jpeg",name:"G4FJ Motor - Tucson 2"},
-{img:"G4LA-sifir-sandik-motor-hyundai-i10-sifir-sandik-motor-hyundai-i10-g4la-sifir-sandik-motor-˜10-sifir-motor.JPEG",name:"G4LA Motor - i10"},
-{img:"G4LA-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4la-sifir-sandik-motor.JPEG",name:"G4LA Motor - i20"},
-{img:"G4LC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4lc-sifir-sandik-motor.JPEG",name:"G4LC Motor - Accent"},
-{img:"G4LC-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4lc-sifir-sandik-motor.JPEG",name:"G4LC Motor - i20"},
-{img:"G4LC-sifir-sandik-motor-kia-rio-sifir-sandik-motor-kia-rio-g4lc-sifir-sandik-motor.JPEG",name:"G4LC Motor - Rio"},
-{img:"hyundai-elantra-sifir-motor-G4FD-motor-2010-2015-g4fd-motor.jpeg",name:"G4FD Motor - Elantra"},
-{img:"hyundai-i30-sifir-motor-G4FD-sandik-motor-2011-2017-g4fd-motor.jpeg",name:"G4FD Motor - i30"},
-{img:"hyundai-ix35-sandik-motor-hyundai-ix35-sifir-sandik-motor-G4FD-motor-hyundai-ix35-g4fd-sandik-motor.jpeg",name:"G4FD Motor - ix35"},
-{img:"hyundai-tucson-sifir-motor-sandik-motor-G4FD-motor-g4fd-sandik-motor.jpeg",name:"G4FD Motor - Tucson"},
-{img:"kia-ceed-sifir-sandik-motor-G4FD-motor-ceed-g4fd-sifir-sandik-motor.jpeg",name:"G4FD Motor - Ceed"},
-{img:"kia-cerato-sifir-sandik-motor-G4FD-motor-cerato-sandik-motor.jpeg",name:"G4FD Motor - Cerato"},
-{img:"kia-rio-sifir-sandik-motor-kia-rio-3-sifir-sandik-motor-kia-rio-G4FD-motor-kia-rio-g4fd-sifir-motor.jpeg",name:"G4FD Motor - Rio"},
-{img:"kia-soul-sifir-sandik-motor-kia-soul-G4FD-sifir-motor-g4fd-sandik-motor.jpeg",name:"G4FD Motor - Soul"},
-{img:"kia-sportage-sifir-sandik-motor-kia-sportage-G4FD-motor-sportage-sifir-g4fd-motor.jpeg",name:"G4FD Motor - Sportage"}
-];
+// Header scroll shadow
+const header = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
 
-const grid = document.getElementById("productGrid");
-const detailPage = document.getElementById("detailPage");
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animate-in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
 
-function renderProducts(list){
- grid.innerHTML="";
- list.forEach(p=>{
-  const div=document.createElement("div");
-  div.className="card";
-  div.innerHTML=`<img src="${p.img}"><div class="card-content"><h3>${p.name}</h3></div>`;
-  div.onclick=()=>openDetail(p);
-  grid.appendChild(div);
- });
-}
-
-function openDetail(p){
- document.getElementById("listPage").style.display="none";
- detailPage.classList.add("active");
- detailPage.innerHTML=`
- <div class="back" onclick="goBack()">← Geri</div>
- <h2>${p.name}</h2>
- <img src="${p.img}" style="width:100%;max-width:500px;border-radius:15px">
- <p>Hyundai sıfır sandık motor. Türkiye geneli kargo. Cihat Hyundai güvencesi.</p>
- <a class="btn" href="tel:05537383806">Hemen Ara</a>
- `;
-}
-
-function goBack(){
- detailPage.classList.remove("active");
- document.getElementById("listPage").style.display="block";
-}
-
-renderProducts(products);
-
-document.getElementById("searchInput").addEventListener("keyup",function(){
- const val=this.value.toLowerCase();
- const filtered=products.filter(p=>p.name.toLowerCase().includes(val));
- renderProducts(filtered);
+document.querySelectorAll('.product-card, .why-card, .cta-banner, .seo-block').forEach((el, i) => {
+  el.style.animationDelay = `${i * 0.08}s`;
+  observer.observe(el);
 });
 </script>
 
