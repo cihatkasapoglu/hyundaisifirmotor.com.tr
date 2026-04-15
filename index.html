@@ -12,9 +12,6 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="tr_TR">
 <link rel="canonical" href="https://www.cihat-hyundai.com/">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <!-- Schema Markup -->
 <script type="application/ld+json">
@@ -72,14 +69,14 @@
 html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: Arial, sans-serif;
   color: var(--gray-800);
   background: var(--white);
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 { font-family: 'Syne', sans-serif; line-height: 1.2; }
+h1, h2, h3, h4 { font-family: Arial, sans-serif; line-height: 1.2; }
 
 a { text-decoration: none; color: inherit; }
 
@@ -100,36 +97,37 @@ img { max-width: 100%; height: auto; display: block; }
 
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
-  height: 72px; gap: 24px;
+  height: 64px; gap: 16px;
 }
 
 .logo {
-  display: flex; align-items: center; gap: 12px;
-  font-family: 'Syne', sans-serif; font-weight: 800;
-  font-size: 1.25rem; color: var(--accent);
+  display: flex; align-items: center; gap: 10px;
+  font-family: Arial, sans-serif; font-weight: 800;
+  font-size: 1.15rem; color: var(--accent);
   flex-shrink: 0;
 }
 .logo-icon {
-  width: 44px; height: 44px; background: var(--accent);
+  width: 40px; height: 40px; background: var(--accent);
   border-radius: 10px; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
 }
 .logo-icon svg { color: white; }
 .logo-text span { color: var(--gray-800); }
 
 nav { display: flex; align-items: center; gap: 4px; }
 nav a {
-  padding: 8px 16px; border-radius: 8px;
+  padding: 8px 14px; border-radius: 8px;
   font-weight: 500; font-size: 0.9rem; color: var(--gray-600);
   transition: var(--transition);
 }
 nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
 
-.header-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.header-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
 
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
-  padding: 10px 20px; border-radius: 10px;
-  font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.875rem;
+  padding: 10px 18px; border-radius: 10px;
+  font-family: Arial, sans-serif; font-weight: 700; font-size: 0.875rem;
   cursor: pointer; border: none; transition: var(--transition);
   white-space: nowrap;
 }
@@ -163,7 +161,7 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
   min-height: 100vh; display: flex; align-items: center;
   position: relative; overflow: hidden;
   background: linear-gradient(135deg, var(--blue-900) 0%, #0a1f4a 50%, #0d2860 100%);
-  padding-top: 72px;
+  padding-top: 64px;
 }
 
 .hero-bg {
@@ -182,8 +180,8 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
 
 .hero-content {
   position: relative; z-index: 1;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
-  align-items: center; padding: 80px 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  align-items: center; padding: 60px 0;
 }
 
 .hero-badge {
@@ -192,42 +190,43 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 100px; padding: 6px 16px;
   color: rgba(255,255,255,0.85); font-size: 0.8rem; font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
-.hero-badge-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; }
+.hero-badge-dot { width: 8px; height: 8px; background: #4ade80; border-radius: 50%; animation: pulse 2s infinite; flex-shrink: 0; }
 
 @keyframes pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.2); } }
 
 .hero-title {
-  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
-  color: white; margin-bottom: 20px; font-weight: 800;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.8rem, 4vw, 3.8rem);
+  color: white; margin-bottom: 16px; font-weight: 800;
+  letter-spacing: -0.01em;
 }
 .hero-title .accent-word { color: var(--blue-400); }
 
 .hero-subtitle {
-  font-size: 1.1rem; color: rgba(255,255,255,0.7);
-  line-height: 1.7; margin-bottom: 36px; max-width: 500px;
+  font-size: 1rem; color: rgba(255,255,255,0.7);
+  line-height: 1.7; margin-bottom: 28px; max-width: 500px;
 }
 
-.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
 .btn-hero-primary {
   background: white; color: var(--accent);
-  padding: 14px 28px; font-size: 1rem; border-radius: 12px;
+  padding: 13px 24px; font-size: 0.95rem; border-radius: 12px;
   font-weight: 700; transition: var(--transition);
 }
 .btn-hero-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(255,255,255,0.25); }
 .btn-hero-wa {
   background: var(--whatsapp); color: white;
-  padding: 14px 28px; font-size: 1rem; border-radius: 12px;
+  padding: 13px 24px; font-size: 0.95rem; border-radius: 12px;
   font-weight: 700; transition: var(--transition);
+  display: inline-flex; align-items: center; gap: 8px;
 }
 .btn-hero-wa:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,211,102,0.4); }
 
-.hero-stats { display: flex; gap: 32px; }
+.hero-stats { display: flex; gap: 28px; flex-wrap: wrap; }
 .stat { text-align: left; }
-.stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: white; }
-.stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.55); font-weight: 400; margin-top: 2px; }
+.stat-num { font-family: Arial, sans-serif; font-size: 1.8rem; font-weight: 800; color: white; }
+.stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.55); font-weight: 400; margin-top: 2px; }
 
 .hero-visual {
   display: flex; justify-content: center; align-items: center;
@@ -237,24 +236,24 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
   background: rgba(255,255,255,0.06);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 24px; padding: 32px;
-  text-align: center; max-width: 380px; width: 100%;
+  border-radius: 24px; padding: 28px;
+  text-align: center; max-width: 360px; width: 100%;
 }
 .hero-engine-icon {
-  width: 120px; height: 120px;
+  width: 100px; height: 100px;
   background: linear-gradient(135deg, var(--accent), var(--blue-400));
-  border-radius: 20px; margin: 0 auto 24px;
+  border-radius: 20px; margin: 0 auto 20px;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 20px 60px rgba(0,82,204,0.4);
 }
 .engine-codes {
-  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 20px;
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 16px;
 }
 .engine-code {
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.12);
   color: var(--blue-400); padding: 5px 12px; border-radius: 6px;
-  font-family: 'Syne', sans-serif; font-size: 0.8rem; font-weight: 700;
+  font-family: Arial, sans-serif; font-size: 0.8rem; font-weight: 700;
   letter-spacing: 0.05em;
 }
 
@@ -262,20 +261,20 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
 .trust-bar {
   background: var(--gray-50);
   border-bottom: 1px solid var(--gray-200);
-  padding: 16px 0;
+  padding: 14px 0;
 }
 .trust-items {
-  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 32px;
+  display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px;
 }
 .trust-item {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: center; gap: 8px;
   font-size: 0.875rem; font-weight: 500; color: var(--gray-600);
 }
 .trust-item svg { color: var(--accent); flex-shrink: 0; }
 
 /* ===== SECTIONS ===== */
-.section { padding: 96px 0; }
-.section-sm { padding: 64px 0; }
+.section { padding: 80px 0; }
+.section-sm { padding: 56px 0; }
 .section-alt { background: var(--gray-50); }
 .section-dark { background: var(--gray-900); color: white; }
 
@@ -284,26 +283,26 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
   background: var(--blue-50); color: var(--accent);
   border-radius: 100px; padding: 5px 14px;
   font-size: 0.78rem; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; margin-bottom: 16px;
+  text-transform: uppercase; margin-bottom: 14px;
 }
 .section-title {
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  font-weight: 800; margin-bottom: 16px;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 800; margin-bottom: 14px;
+  letter-spacing: -0.01em;
 }
 .section-subtitle {
-  font-size: 1.05rem; color: var(--gray-600); max-width: 560px;
+  font-size: 1rem; color: var(--gray-600); max-width: 560px;
   line-height: 1.7;
 }
-.section-header { margin-bottom: 56px; }
+.section-header { margin-bottom: 48px; }
 .section-header.center { text-align: center; }
 .section-header.center .section-subtitle { margin: 0 auto; }
 
 /* ===== WHY US ===== */
-.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .why-card {
   background: white; border-radius: var(--radius-lg);
-  padding: 36px 28px; border: 1px solid var(--gray-200);
+  padding: 32px 24px; border: 1px solid var(--gray-200);
   transition: var(--transition);
   position: relative; overflow: hidden;
 }
@@ -318,31 +317,31 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
 .why-card:hover::before { transform: scaleX(1); }
 
 .why-icon {
-  width: 56px; height: 56px;
+  width: 52px; height: 52px;
   background: var(--blue-50); border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 20px; color: var(--accent);
+  margin-bottom: 18px; color: var(--accent);
 }
-.why-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; }
-.why-desc { font-size: 0.9rem; color: var(--gray-600); line-height: 1.6; }
+.why-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; }
+.why-desc { font-size: 0.875rem; color: var(--gray-600); line-height: 1.6; }
 
 /* ===== PRODUCTS ===== */
-#urunler { padding: 96px 0; }
+#urunler { padding: 80px 0; }
 
 .products-filter {
-  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; justify-content: center;
+  display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; justify-content: center;
 }
 .filter-btn {
-  padding: 8px 18px; border-radius: 8px; border: 1.5px solid var(--gray-200);
-  background: white; color: var(--gray-600); font-size: 0.85rem; font-weight: 600;
-  cursor: pointer; transition: var(--transition); font-family: 'DM Sans', sans-serif;
+  padding: 8px 16px; border-radius: 8px; border: 1.5px solid var(--gray-200);
+  background: white; color: var(--gray-600); font-size: 0.82rem; font-weight: 600;
+  cursor: pointer; transition: var(--transition); font-family: Arial, sans-serif;
 }
 .filter-btn.active, .filter-btn:hover {
   background: var(--accent); color: white; border-color: var(--accent);
 }
 
 .products-grid {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 28px;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;
 }
 
 .product-card {
@@ -364,47 +363,47 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
 .product-card:hover .product-image img { transform: scale(1.07); }
 
 .product-badge {
-  position: absolute; top: 12px; left: 12px;
+  position: absolute; top: 10px; left: 10px;
   background: var(--accent); color: white;
   padding: 4px 10px; border-radius: 6px;
-  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
+  font-size: 0.7rem; font-weight: 700; letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
-.product-body { padding: 24px; }
+.product-body { padding: 20px; }
 .product-series {
-  font-size: 0.75rem; font-weight: 700; color: var(--accent);
-  letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px;
+  font-size: 0.72rem; font-weight: 700; color: var(--accent);
+  letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px;
 }
 .product-name {
-  font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; line-height: 1.3;
+  font-size: 1rem; font-weight: 700; margin-bottom: 8px; line-height: 1.3;
 }
 .product-desc {
-  font-size: 0.85rem; color: var(--gray-600); line-height: 1.6;
-  margin-bottom: 16px;
+  font-size: 0.83rem; color: var(--gray-600); line-height: 1.6;
+  margin-bottom: 14px;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
 
-.product-specs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+.product-specs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px; }
 .spec-tag {
   background: var(--gray-100); color: var(--gray-600);
-  padding: 3px 10px; border-radius: 5px; font-size: 0.75rem; font-weight: 500;
+  padding: 3px 8px; border-radius: 5px; font-size: 0.73rem; font-weight: 500;
 }
 
 .product-actions { display: flex; gap: 8px; }
-.btn-sm { padding: 9px 16px; font-size: 0.82rem; border-radius: 8px; flex: 1; justify-content: center; }
+.btn-sm { padding: 9px 14px; font-size: 0.82rem; border-radius: 8px; flex: 1; justify-content: center; }
 
 /* ===== PRODUCT MODAL ===== */
 .modal-overlay {
   position: fixed; inset: 0; z-index: 2000;
   background: rgba(0,0,0,0.65); backdrop-filter: blur(8px);
   display: flex; align-items: center; justify-content: center;
-  padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  padding: 16px; opacity: 0; pointer-events: none; transition: opacity 0.3s;
 }
 .modal-overlay.open { opacity: 1; pointer-events: all; }
 
 .modal {
-  background: white; border-radius: 24px; max-width: 820px; width: 100%;
+  background: white; border-radius: 20px; max-width: 820px; width: 100%;
   max-height: 90vh; overflow-y: auto;
   transform: translateY(30px) scale(0.97); transition: transform 0.3s, opacity 0.3s;
 }
@@ -413,37 +412,37 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
 .modal-header { position: relative; }
 .modal-img {
   width: 100%; aspect-ratio: 16/9; object-fit: cover;
-  border-radius: 24px 24px 0 0;
+  border-radius: 20px 20px 0 0;
 }
 .modal-close {
-  position: absolute; top: 16px; right: 16px;
+  position: absolute; top: 12px; right: 12px;
   background: white; border: none; border-radius: 50%;
-  width: 40px; height: 40px; cursor: pointer; font-size: 1.2rem;
+  width: 38px; height: 38px; cursor: pointer; font-size: 1.1rem;
   display: flex; align-items: center; justify-content: center;
   box-shadow: var(--shadow-md); transition: var(--transition);
 }
 .modal-close:hover { background: var(--gray-100); }
 
-.modal-body { padding: 32px; }
-.modal-series { font-size: 0.78rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
-.modal-title { font-size: 1.8rem; font-weight: 800; margin-bottom: 12px; }
-.modal-desc { font-size: 0.95rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 28px; }
+.modal-body { padding: 28px; }
+.modal-series { font-size: 0.75rem; font-weight: 700; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+.modal-title { font-size: 1.6rem; font-weight: 800; margin-bottom: 12px; }
+.modal-desc { font-size: 0.9rem; color: var(--gray-600); line-height: 1.8; margin-bottom: 24px; }
 
-.modal-details { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; }
-.modal-detail-group h3 { font-size: 0.85rem; font-weight: 700; color: var(--gray-800); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+.modal-details { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+.modal-detail-group h3 { font-size: 0.82rem; font-weight: 700; color: var(--gray-800); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
 .modal-detail-group ul { list-style: none; }
 .modal-detail-group ul li {
-  font-size: 0.875rem; color: var(--gray-600); padding: 6px 0;
+  font-size: 0.85rem; color: var(--gray-600); padding: 6px 0;
   border-bottom: 1px solid var(--gray-100);
   display: flex; align-items: center; gap: 8px;
 }
 .modal-detail-group ul li::before { content: '✓'; color: var(--accent); font-weight: 700; }
 
 .modal-actions { display: flex; gap: 12px; }
-.modal-actions .btn { flex: 1; justify-content: center; padding: 14px 24px; font-size: 0.95rem; }
+.modal-actions .btn { flex: 1; justify-content: center; padding: 14px 20px; font-size: 0.9rem; }
 
 /* ===== BLOG ===== */
-.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .blog-card {
   background: white; border-radius: var(--radius-lg);
   border: 1px solid var(--gray-200); overflow: hidden;
@@ -451,102 +450,102 @@ nav a:hover, nav a.active { background: var(--blue-50); color: var(--accent); }
 }
 .blog-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
 .blog-img { aspect-ratio: 16/9; background: linear-gradient(135deg, var(--blue-100), var(--blue-50)); display: flex; align-items: center; justify-content: center; }
-.blog-img-icon { font-size: 3.5rem; }
-.blog-content { padding: 24px; }
-.blog-tag { font-size: 0.72rem; font-weight: 700; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; }
-.blog-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
-.blog-excerpt { font-size: 0.875rem; color: var(--gray-600); line-height: 1.6; }
+.blog-img-icon { font-size: 3rem; }
+.blog-content { padding: 20px; }
+.blog-tag { font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 8px; }
+.blog-title { font-size: 1rem; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
+.blog-excerpt { font-size: 0.85rem; color: var(--gray-600); line-height: 1.6; }
 
 /* ===== ABOUT ===== */
-.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
 .about-visual {
   background: linear-gradient(135deg, var(--blue-900), #0a1f4a);
-  border-radius: 24px; padding: 40px; color: white; position: relative; overflow: hidden;
+  border-radius: 24px; padding: 36px; color: white; position: relative; overflow: hidden;
 }
 .about-visual::before {
   content: ''; position: absolute; inset: 0;
   background: radial-gradient(ellipse at 80% 20%, rgba(59,130,246,0.2) 0%, transparent 60%);
 }
-.about-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; position: relative; }
+.about-stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; position: relative; }
 .about-stat-item {
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 14px; padding: 24px 20px;
+  border-radius: 14px; padding: 20px 16px;
 }
-.about-stat-num { font-family: 'Syne', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--blue-400); }
-.about-stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
-.about-list { list-style: none; margin-top: 24px; }
+.about-stat-num { font-family: Arial, sans-serif; font-size: 2rem; font-weight: 800; color: var(--blue-400); }
+.about-stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+.about-list { list-style: none; margin-top: 20px; }
 .about-list li {
-  padding: 12px 0; border-bottom: 1px solid var(--gray-200);
-  display: flex; align-items: flex-start; gap: 12px; font-size: 0.9rem; color: var(--gray-600);
+  padding: 11px 0; border-bottom: 1px solid var(--gray-200);
+  display: flex; align-items: flex-start; gap: 12px; font-size: 0.875rem; color: var(--gray-600);
 }
 .about-list li::before { content: '✓'; background: var(--blue-50); color: var(--accent); width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700; flex-shrink: 0; }
 
 /* ===== CONTACT ===== */
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-.contact-info-items { display: flex; flex-direction: column; gap: 20px; margin-top: 32px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.contact-info-items { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
 .contact-info-item {
-  display: flex; align-items: flex-start; gap: 16px;
+  display: flex; align-items: flex-start; gap: 14px;
   background: white; border: 1px solid var(--gray-200);
-  border-radius: 14px; padding: 20px;
+  border-radius: 14px; padding: 18px;
 }
 .contact-info-icon {
-  width: 46px; height: 46px; background: var(--blue-50);
+  width: 44px; height: 44px; background: var(--blue-50);
   border-radius: 12px; display: flex; align-items: center; justify-content: center;
   color: var(--accent); flex-shrink: 0;
 }
-.contact-info-label { font-size: 0.75rem; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
-.contact-info-value { font-weight: 600; color: var(--gray-800); font-size: 0.95rem; line-height: 1.5; }
+.contact-info-label { font-size: 0.72rem; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+.contact-info-value { font-weight: 600; color: var(--gray-800); font-size: 0.9rem; line-height: 1.5; }
 .contact-info-value a { color: var(--accent); }
 
 .map-container {
-  border-radius: 20px; overflow: hidden;
-  border: 1px solid var(--gray-200); height: 400px; background: var(--gray-100);
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid var(--gray-200); height: 380px; background: var(--gray-100);
   cursor: pointer; position: relative; transition: var(--transition);
 }
 .map-container:hover { box-shadow: var(--shadow-lg); }
 .map-placeholder {
   width: 100%; height: 100%;
   display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 16px;
+  align-items: center; justify-content: center; gap: 14px;
   background: linear-gradient(135deg, var(--blue-50), var(--gray-100));
   color: var(--gray-600);
 }
-.map-pin { font-size: 3rem; }
-.map-text { font-size: 0.95rem; font-weight: 600; color: var(--gray-800); text-align: center; }
-.map-sub { font-size: 0.8rem; color: var(--gray-400); }
+.map-pin { font-size: 2.8rem; }
+.map-text { font-size: 0.9rem; font-weight: 600; color: var(--gray-800); text-align: center; }
+.map-sub { font-size: 0.78rem; color: var(--gray-400); }
 
 /* ===== CITY FOOTER SEO ===== */
-.city-section { padding: 40px 0; background: var(--gray-50); border-top: 1px solid var(--gray-200); }
-.city-title { font-size: 0.8rem; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 16px; }
+.city-section { padding: 36px 0; background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+.city-title { font-size: 0.78rem; font-weight: 700; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
 .city-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .city-tag {
   background: white; border: 1px solid var(--gray-200);
   color: var(--gray-600); padding: 5px 12px; border-radius: 6px;
-  font-size: 0.8rem; transition: var(--transition); cursor: pointer;
+  font-size: 0.78rem; transition: var(--transition); cursor: pointer;
 }
 .city-tag:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ===== FOOTER ===== */
 footer {
-  background: var(--gray-900); color: white; padding: 60px 0 32px;
+  background: var(--gray-900); color: white; padding: 56px 0 28px;
 }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; }
-.footer-brand-desc { font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-top: 16px; }
-.footer-col-title { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 16px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.footer-brand-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-top: 14px; }
+.footer-col-title { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: rgba(255,255,255,0.4); margin-bottom: 14px; }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-links li a { font-size: 0.875rem; color: rgba(255,255,255,0.6); transition: var(--transition); }
+.footer-links li a { font-size: 0.85rem; color: rgba(255,255,255,0.6); transition: var(--transition); }
 .footer-links li a:hover { color: white; }
-.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; }
-.footer-copy { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; }
+.footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
 .footer-phones { display: flex; gap: 16px; }
-.footer-phones a { font-size: 0.8rem; color: rgba(255,255,255,0.5); transition: var(--transition); }
+.footer-phones a { font-size: 0.78rem; color: rgba(255,255,255,0.5); transition: var(--transition); }
 .footer-phones a:hover { color: white; }
 
 /* ===== FLOATING WA ===== */
 .wa-float {
-  position: fixed; bottom: 28px; right: 28px; z-index: 900;
-  width: 58px; height: 58px;
+  position: fixed; bottom: 24px; right: 24px; z-index: 900;
+  width: 56px; height: 56px;
   background: var(--whatsapp); border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 4px 20px rgba(37,211,102,0.5);
@@ -555,7 +554,7 @@ footer {
 }
 .wa-float:hover { transform: scale(1.1); box-shadow: 0 8px 32px rgba(37,211,102,0.6); }
 @keyframes wa-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-.wa-float svg { color: white; width: 28px; height: 28px; }
+.wa-float svg { color: white; width: 26px; height: 26px; }
 
 /* ===== SCROLL ANIMATIONS ===== */
 .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -568,25 +567,27 @@ footer {
 /* ===== MOBILE NAV ===== */
 .mobile-nav {
   display: none; position: fixed; inset: 0; z-index: 1500;
-  background: white; padding: 88px 24px 40px;
-  flex-direction: column; gap: 8px;
+  background: white; padding: 80px 24px 40px;
+  flex-direction: column; gap: 6px;
   transform: translateX(100%); transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
 }
 .mobile-nav.open { transform: translateX(0); }
 .mobile-nav a {
   padding: 14px 16px; border-radius: 10px;
-  font-size: 1.1rem; font-weight: 600; color: var(--gray-800);
+  font-size: 1.05rem; font-weight: 600; color: var(--gray-800);
   border-bottom: 1px solid var(--gray-100);
 }
-.mobile-nav .mobile-actions { margin-top: 24px; display: flex; flex-direction: column; gap: 10px; }
+.mobile-nav .mobile-actions { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .hero-content { grid-template-columns: 1fr; gap: 48px; text-align: center; }
-  .hero-subtitle, .hero-ctas, .hero-stats { margin-left: auto; margin-right: auto; justify-content: center; }
-  .hero-visual { max-width: 420px; margin: 0 auto; }
-  .about-grid { grid-template-columns: 1fr; gap: 48px; }
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .hero-content { grid-template-columns: 1fr; gap: 40px; text-align: center; }
+  .hero-subtitle { margin-left: auto; margin-right: auto; }
+  .hero-ctas { justify-content: center; }
+  .hero-stats { justify-content: center; }
+  .hero-visual { max-width: 400px; margin: 0 auto; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
   .blog-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -594,24 +595,125 @@ footer {
 @media (max-width: 768px) {
   nav { display: none; }
   .header-actions .btn-primary { display: none; }
+  .header-actions .btn-whatsapp { display: none; }
   .hamburger { display: flex; }
   .mobile-nav { display: flex; }
-  .section { padding: 64px 0; }
-  .why-grid { grid-template-columns: 1fr; }
-  .blog-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .products-grid { grid-template-columns: 1fr 1fr; }
-  .modal-details { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-  .hero-stats { gap: 20px; }
+
+  .section { padding: 48px 0; }
+  #urunler { padding: 48px 0; }
+
+  /* Hero mobil */
+  .hero { min-height: auto; padding-top: 64px; }
+  .hero-content { 
+    grid-template-columns: 1fr; 
+    gap: 32px; 
+    text-align: center; 
+    padding: 40px 0 48px;
+  }
+  .hero-title { font-size: 1.9rem; }
+  .hero-subtitle { font-size: 0.95rem; margin: 0 auto 24px; }
+  .hero-badge { font-size: 0.75rem; padding: 5px 12px; }
+  .hero-ctas { 
+    flex-direction: column; 
+    align-items: stretch; 
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .btn-hero-primary, .btn-hero-wa { 
+    width: 100%; 
+    justify-content: center; 
+    text-align: center;
+    padding: 14px 20px;
+  }
+  .hero-stats { 
+    gap: 16px; 
+    justify-content: center; 
+    flex-wrap: wrap;
+  }
+  .stat-num { font-size: 1.5rem; }
+  .hero-visual { display: none; }
+
+  /* Trust bar mobil */
+  .trust-bar { padding: 12px 0; }
+  .trust-items { gap: 12px; }
+  .trust-item { font-size: 0.78rem; gap: 6px; }
+  .trust-item svg { width: 15px; height: 15px; }
+
+  /* Section headers mobil */
+  .section-title { font-size: 1.5rem; }
+  .section-subtitle { font-size: 0.9rem; }
+  .section-header { margin-bottom: 32px; }
+
+  /* Why grid mobil */
+  .why-grid { grid-template-columns: 1fr; gap: 16px; }
+  .why-card { padding: 24px 20px; }
+
+  /* Products mobil */
+  .products-filter { gap: 6px; margin-bottom: 24px; }
+  .filter-btn { padding: 7px 12px; font-size: 0.78rem; }
+  .products-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .product-body { padding: 14px; }
+  .product-name { font-size: 0.88rem; }
+  .product-desc { font-size: 0.78rem; -webkit-line-clamp: 2; }
+  .product-specs { gap: 4px; margin-bottom: 12px; }
+  .spec-tag { font-size: 0.68rem; padding: 2px 6px; }
+  .product-actions { flex-direction: column; gap: 6px; }
+  .btn-sm { padding: 9px 10px; font-size: 0.78rem; }
+
+  /* Modal mobil */
+  .modal-overlay { padding: 12px; }
+  .modal { border-radius: 16px; }
+  .modal-body { padding: 20px 16px; }
+  .modal-title { font-size: 1.2rem; }
+  .modal-desc { font-size: 0.85rem; margin-bottom: 18px; }
+  .modal-details { grid-template-columns: 1fr; gap: 16px; margin-bottom: 18px; }
+  .modal-actions { flex-direction: column; gap: 10px; }
+  .modal-actions .btn { padding: 13px 16px; }
+
+  /* Blog mobil */
+  .blog-grid { grid-template-columns: 1fr; gap: 16px; }
+  .blog-content { padding: 16px; }
+
+  /* About mobil */
+  .about-grid { grid-template-columns: 1fr; gap: 32px; }
+  .about-visual { padding: 24px 20px; }
+  .about-stat-num { font-size: 1.7rem; }
+
+  /* Contact mobil */
+  .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+  .contact-info-items { margin-top: 0; gap: 12px; }
+  .contact-info-item { padding: 14px; gap: 12px; }
+  .contact-info-icon { width: 40px; height: 40px; }
+  .map-container { height: 280px; }
+
+  /* Footer mobil */
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+  footer { padding: 40px 0 24px; }
+
+  /* City section mobil */
+  .city-section { padding: 28px 0; }
+  .city-list { gap: 6px; }
+  .city-tag { font-size: 0.72rem; padding: 4px 10px; }
+
+  /* WA float mobil */
+  .wa-float { width: 52px; height: 52px; bottom: 20px; right: 20px; }
+  .wa-float svg { width: 24px; height: 24px; }
 }
 
 @media (max-width: 480px) {
-  .products-grid { grid-template-columns: 1fr; }
-  .modal-body { padding: 20px; }
-  .modal-actions { flex-direction: column; }
-  .hero-ctas { flex-direction: column; align-items: center; }
+  .container { padding: 0 16px; }
+  .hero-title { font-size: 1.65rem; }
+  .hero-badge { font-size: 0.72rem; }
+  .products-grid { grid-template-columns: 1fr; gap: 14px; }
+  .product-image { aspect-ratio: 16/9; }
+  .product-desc { -webkit-line-clamp: 3; }
+  .product-actions { flex-direction: row; }
+  .why-grid { grid-template-columns: 1fr; }
+  .about-stat-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .about-stat-item { padding: 16px 12px; }
+  .hero-stats { gap: 20px; }
+  .stat-num { font-size: 1.4rem; }
 }
 
 /* ===== MISC ===== */
@@ -628,7 +730,7 @@ footer {
     <div class="header-inner">
       <a href="#" class="logo" aria-label="Cihat Hyundai Ana Sayfa">
         <div class="logo-icon">
-          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+          <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
           </svg>
         </div>
@@ -644,11 +746,11 @@ footer {
 
       <div class="header-actions">
         <a href="tel:05537383806" class="btn btn-primary">
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.19 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
           Hemen Ara
         </a>
         <a href="https://wa.me/905537383806?text=Merhaba%2C%20sandık%20motor%20hakkında%20bilgi%20almak%20istiyorum." target="_blank" rel="noopener" class="btn btn-whatsapp">
-          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp
         </a>
         <button class="hamburger" id="hamburger" aria-label="Menüyü aç">
@@ -702,13 +804,13 @@ footer {
       <div class="hero-visual">
         <div class="hero-engine-card">
           <div class="hero-engine-icon">
-            <svg width="60" height="60" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24">
+            <svg width="54" height="54" fill="none" stroke="white" stroke-width="1.5" viewBox="0 0 24 24">
               <rect x="2" y="7" width="20" height="10" rx="2"/>
               <path d="M6 7V5M10 7V5M14 7V5M18 7V5M6 17v2M18 17v2M2 12h2M20 12h2"/>
             </svg>
           </div>
-          <div style="color:rgba(255,255,255,0.9);font-family:'Syne',sans-serif;font-weight:700;font-size:1.1rem;margin-bottom:8px;">Stokta Mevcut Seriler</div>
-          <div style="color:rgba(255,255,255,0.55);font-size:0.82rem;">Tüm modeller için hazır</div>
+          <div style="color:rgba(255,255,255,0.9);font-family:Arial,sans-serif;font-weight:700;font-size:1rem;margin-bottom:6px;">Stokta Mevcut Seriler</div>
+          <div style="color:rgba(255,255,255,0.55);font-size:0.8rem;">Tüm modeller için hazır</div>
           <div class="engine-codes">
             <span class="engine-code">G4FC</span>
             <span class="engine-code">G4FG</span>
@@ -728,27 +830,27 @@ footer {
   <div class="container">
     <div class="trust-items">
       <div class="trust-item">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         <span>Garantili Ürün</span>
       </div>
       <div class="trust-item">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
         <span>Hızlı Teslimat</span>
       </div>
       <div class="trust-item">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         <span>Test Edilmiş Motor</span>
       </div>
       <div class="trust-item">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
         <span>Uzman Destek</span>
       </div>
       <div class="trust-item">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
         <span>Ankara Merkezli</span>
       </div>
       <div class="trust-item">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+        <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
         <span>Tüm Türkiye Kargo</span>
       </div>
     </div>
@@ -875,9 +977,9 @@ footer {
       <div class="reveal">
         <div class="section-tag">Hakkımızda</div>
         <h2 class="section-title">Cihat Hyundai Kimdir?</h2>
-        <p style="color:var(--gray-600);line-height:1.8;margin-bottom:20px;">Cihat Hyundai, Ankara Yenimahalle'de faaliyet gösteren, Hyundai ve Kia araçları için uzmanlaşmış sandık motor tedarik firmasıdır. Sektörde edindiğimiz derin deneyim ile binlerce araç sahibine güvenilir, test edilmiş ve garantili motor çözümleri sunmaktayız.</p>
-        <p style="color:var(--gray-600);line-height:1.8;margin-bottom:20px;">G4FC, G4FG, G4FJ, G4LA, G4LC ve G4FD gibi geniş motor serimizle Hyundai Accent Blue, i20, i30, Elantra, Tucson, ix35 ve Kia Rio, Ceed, Sportage, Cerato, Soul gibi çok sayıda modele hizmet veriyoruz. Her motorumuz, depomuzda titizlikle muayene edilmekte ve sıkı kalite kontrolünden geçirilmektedir.</p>
-        <p style="color:var(--gray-600);line-height:1.8;margin-bottom:28px;">Ankara'daki merkez depomuza yüzlerce motor stoğuyla hazır beklerken, aynı zamanda Türkiye'nin tüm illerine hızlı ve güvenli kargo hizmeti sunuyoruz. Müşteri memnuniyeti ve şeffaflık ilkelerinden ödün vermeden çalışmaya devam ediyoruz.</p>
+        <p style="color:var(--gray-600);line-height:1.8;margin-bottom:18px;">Cihat Hyundai, Ankara Yenimahalle'de faaliyet gösteren, Hyundai ve Kia araçları için uzmanlaşmış sandık motor tedarik firmasıdır. Sektörde edindiğimiz derin deneyim ile binlerce araç sahibine güvenilir, test edilmiş ve garantili motor çözümleri sunmaktayız.</p>
+        <p style="color:var(--gray-600);line-height:1.8;margin-bottom:18px;">G4FC, G4FG, G4FJ, G4LA, G4LC ve G4FD gibi geniş motor serimizle Hyundai Accent Blue, i20, i30, Elantra, Tucson, ix35 ve Kia Rio, Ceed, Sportage, Cerato, Soul gibi çok sayıda modele hizmet veriyoruz.</p>
+        <p style="color:var(--gray-600);line-height:1.8;margin-bottom:24px;">Ankara'daki merkez depomuza yüzlerce motor stoğuyla hazır beklerken, aynı zamanda Türkiye'nin tüm illerine hızlı ve güvenli kargo hizmeti sunuyoruz.</p>
         <ul class="about-list">
           <li>Yetkilendirilmiş teknik ekip ile ön kontrol ve test</li>
           <li>Her ürün için garanti belgesi düzenlenmektedir</li>
@@ -888,7 +990,7 @@ footer {
       </div>
       <div class="reveal reveal-delay-2">
         <div class="about-visual">
-          <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:white;margin-bottom:24px;position:relative;">Neden Bize Güveniyorlar?</div>
+          <div style="font-family:Arial,sans-serif;font-weight:800;font-size:1.1rem;color:white;margin-bottom:20px;position:relative;">Neden Bize Güveniyorlar?</div>
           <div class="about-stat-grid">
             <div class="about-stat-item">
               <div class="about-stat-num">24+</div>
@@ -907,10 +1009,10 @@ footer {
               <div class="about-stat-label">Test & Garantili</div>
             </div>
           </div>
-          <div style="margin-top:24px;padding:20px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;position:relative;">
-            <div style="font-size:0.8rem;color:rgba(255,255,255,0.4);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:10px;">Adresimiz</div>
-            <div style="color:rgba(255,255,255,0.85);font-size:0.9rem;line-height:1.6;">Serhat Mah. 1126. Cadde No: 14<br>Yenimahalle / Ankara</div>
-            <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap;">
+          <div style="margin-top:20px;padding:18px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;position:relative;">
+            <div style="font-size:0.75rem;color:rgba(255,255,255,0.4);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:8px;">Adresimiz</div>
+            <div style="color:rgba(255,255,255,0.85);font-size:0.875rem;line-height:1.6;">Serhat Mah. 1126. Cadde No: 14<br>Yenimahalle / Ankara</div>
+            <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap;">
               <a href="tel:05537383806" style="color:var(--blue-400);font-weight:600;font-size:0.85rem;">0553 738 38 06</a>
               <span style="color:rgba(255,255,255,0.2);">|</span>
               <a href="tel:05348441861" style="color:var(--blue-400);font-weight:600;font-size:0.85rem;">0534 844 18 61</a>
@@ -936,7 +1038,7 @@ footer {
         <div class="blog-content">
           <div class="blog-tag">Motor Rehberi</div>
           <h2 class="blog-title" itemprop="headline">Sandık Motor Nedir? Ne İşe Yarar?</h2>
-          <p class="blog-excerpt" itemprop="description">Sandık motor, bir araçtan sökülerek başka bir araca takılmak üzere hazırlanan, komple motor ünitidir. Silindir bloğu, krank mili, piston grubu ve tüm iç mekanizmaları içerir. Motor gövdesi tamamen sağlam, hasarsız ve işlevseldir; ancak elektrik sistemi, enjektör veya sensörler dahil değildir. Sıfır sandık motor ise hiç kullanılmamış, fabrika koşullarında muhafaza edilmiş, performansını tam kapasitede sunmaya hazır motor anlamına gelir. Araç tamirinde motor bloğu çatlaksa, aşındıysa veya yağ tüketimi kontrolden çıktıysa sandık motor değişimi en ekonomik ve kalıcı çözümdür.</p>
+          <p class="blog-excerpt" itemprop="description">Sandık motor, bir araçtan sökülerek başka bir araca takılmak üzere hazırlanan, komple motor ünitidir. Silindir bloğu, krank mili, piston grubu ve tüm iç mekanizmaları içerir. Sıfır sandık motor ise hiç kullanılmamış, fabrika koşullarında muhafaza edilmiş, performansını tam kapasitede sunmaya hazır motor anlamına gelir.</p>
         </div>
       </article>
       <article class="blog-card reveal reveal-delay-2" itemscope itemtype="https://schema.org/Article">
@@ -944,7 +1046,7 @@ footer {
         <div class="blog-content">
           <div class="blog-tag">Arıza Rehberi</div>
           <h2 class="blog-title" itemprop="headline">Motor Neden Arıza Yapar? 7 Temel Neden</h2>
-          <p class="blog-excerpt" itemprop="description">Motor arızalarının başında düzensiz yağ değişimi gelir; eski ve yetersiz yağ, sürtünmeyle parçaları hızla aşındırır. Soğutma sistemi arızaları motoru aşırı ısıtır, bu da silindir kapağı çatlakları ve contasının yanmasına yol açar. Yakıt sistemi sorunları (tıkalı enjektörler veya yakıt pompası), motor yeterli enerjiyle beslenemeyince vuruntu ve güç kaybı başlar. Bunlara ek olarak zamanında bakım yapılmaması, düşük kaliteli yakıt kullanımı, turbo hasarı ve soğuk çalıştırma alışkanlıkları da motorun ömrünü kısaltır. Erken belirtileri fark edip önlem almak, sandık motor değişim maliyetini önleyebilir.</p>
+          <p class="blog-excerpt" itemprop="description">Motor arızalarının başında düzensiz yağ değişimi gelir; eski ve yetersiz yağ, sürtünmeyle parçaları hızla aşındırır. Soğutma sistemi arızaları motoru aşırı ısıtır, bu da silindir kapağı çatlakları ve contasının yanmasına yol açar. Erken belirtileri fark edip önlem almak, sandık motor değişim maliyetini önleyebilir.</p>
         </div>
       </article>
       <article class="blog-card reveal reveal-delay-3" itemscope itemtype="https://schema.org/Article">
@@ -952,7 +1054,7 @@ footer {
         <div class="blog-content">
           <div class="blog-tag">Bakım Rehberi</div>
           <h2 class="blog-title" itemprop="headline">Motor Değişimi Ne Zaman Yapılmalı?</h2>
-          <p class="blog-excerpt" itemprop="description">Aşırı yağ tüketimi (her 1.000 km'de 1 litreden fazla), egzozdan sürekli mavi veya siyah duman, motor vuruntu sesi, güç kaybı ile birlikte yükselen motor sıcaklığı ve artan yakıt tüketimi motor değişiminin acil sinyalleridir. Özellikle silindir kapağı contası yanmış, motor bloğu çatlamış ya da krank kolları aşınmış araçlarda tamir masrafı çoğu zaman sandık motor fiyatını aşar. Bu durumda komple motor değişimi hem daha ekonomik hem de daha kalıcı bir çözümdür. Uzman görüşü almadan karar vermemenizi öneririz; bizi arayın, doğru seçeneği birlikte belirleyelim.</p>
+          <p class="blog-excerpt" itemprop="description">Aşırı yağ tüketimi, egzozdan sürekli mavi veya siyah duman, motor vuruntu sesi, güç kaybı ile yükselen motor sıcaklığı ve artan yakıt tüketimi motor değişiminin acil sinyalleridir. Bu durumda komple motor değişimi hem daha ekonomik hem de daha kalıcı bir çözümdür.</p>
         </div>
       </article>
     </div>
@@ -1020,7 +1122,7 @@ footer {
             <div class="map-pin">📍</div>
             <div class="map-text">Cihat Hyundai – Ankara Yenimahalle</div>
             <div class="map-sub">Haritada görmek için tıklayın</div>
-            <div style="margin-top:12px;background:var(--accent);color:white;padding:10px 24px;border-radius:10px;font-weight:600;font-size:0.875rem;">Google Maps'te Aç</div>
+            <div style="margin-top:12px;background:var(--accent);color:white;padding:10px 22px;border-radius:10px;font-weight:600;font-size:0.85rem;">Google Maps'te Aç</div>
           </div>
         </a>
       </div>
@@ -1068,7 +1170,7 @@ footer {
       <div>
         <div class="logo" style="color:white;">
           <div class="logo-icon">
-            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
           </div>
           <span style="color:white;">Cihat<span style="color:rgba(255,255,255,0.5)"> Hyundai</span></span>
         </div>
@@ -1101,7 +1203,7 @@ footer {
           <li><a href="tel:05537383806">0553 738 38 06</a></li>
           <li><a href="tel:05348441861">0534 844 18 61</a></li>
           <li><a href="https://wa.me/905537383806" target="_blank">WhatsApp Hattı</a></li>
-          <li><span style="color:rgba(255,255,255,0.4);font-size:0.85rem;">Serhat Mah. 1126. Cad. No:14<br>Yenimahalle / Ankara</span></li>
+          <li><span style="color:rgba(255,255,255,0.4);font-size:0.82rem;">Serhat Mah. 1126. Cad. No:14<br>Yenimahalle / Ankara</span></li>
         </ul>
       </div>
     </div>
@@ -1132,12 +1234,12 @@ const products = [
     shortName: 'G4FC Accent Blue Motor',
     image: 'G4FC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4fc-sandik-motor.JPEG',
     badge: 'Stokta Mevcut',
-    desc: 'Hyundai Accent Blue için özel olarak temin ettiğimiz G4FC serisi sandık motor, 1.6 litre hacmiyle şehir içi ve şehirlerarası kullanımda yüksek performans sunar. Dört silindirli bu motor, DOHC valf sistemi ve çift kam mili tasarımı sayesinde yakıt verimliliği ile güç dengesini kusursuz biçimde sağlar. Her ünitesi depomuzdaki özel test ünitelerinde sıkı kalite kontrolünden geçirilmektedir. Accent Blue sahiplerinin en çok tercih ettiği motor seçeneği olup, montaj sonrası uzun ömürlü performans için ideal bir çözüm sunar.',
-    fullDesc: 'Hyundai Accent Blue modeli için geliştirilen G4FC serisi sandık motor, 1.6 litrelik silindir hacmi ve DOHC teknolojisiyle dikkat çeker. Motor, çift kam mili tasarımı sayesinde her devir aralığında güç ile tork dengesini korur. Geniş stok kapasitemizle müşterilerimize en hızlı şekilde teslimat yapabiliyoruz. Depomuzdaki her motor, uzman teknisyenler tarafından kapsamlı sızdırmazlık testi, basınç testi ve mekanik kontrol aşamalarından geçirilmektedir. Accent Blue araç sahiplerinin motor sorunlarında ilk tercihi olan G4FC sandık motoru, montaj sonrasında yıllarca sorunsuz çalışma performansı sunar. Yakıt enjeksiyon sistemi ile optimize edilmiş yanma odası geometrisi, hem ekonomik yakıt tüketimine hem de yüksek güç çıkışına imkân tanır.',
+    desc: 'Hyundai Accent Blue için özel olarak temin ettiğimiz G4FC serisi sandık motor, 1.6 litre hacmiyle şehir içi ve şehirlerarası kullanımda yüksek performans sunar. Dört silindirli bu motor, DOHC valf sistemi ve çift kam mili tasarımı sayesinde yakıt verimliliği ile güç dengesini kusursuz biçimde sağlar.',
+    fullDesc: 'Hyundai Accent Blue modeli için geliştirilen G4FC serisi sandık motor, 1.6 litrelik silindir hacmi ve DOHC teknolojisiyle dikkat çeker. Motor, çift kam mili tasarımı sayesinde her devir aralığında güç ile tork dengesini korur. Geniş stok kapasitemizle müşterilerimize en hızlı şekilde teslimat yapabiliyoruz. Depomuzdaki her motor, uzman teknisyenler tarafından kapsamlı sızdırmazlık testi, basınç testi ve mekanik kontrol aşamalarından geçirilmektedir.',
     specs: ['Motor Kodu: G4FC', 'Hacim: 1.6L (1591cc)', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Benzin', 'Güç: ~124 HP'],
     cars: ['Hyundai Accent Blue (2011–2019)', 'Uyumlu diğer G4FC araçlar'],
     metaTitle: 'G4FC Hyundai Accent Blue Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai Accent Blue için G4FC sıfır sandık motor. Test edilmiş, garantili, stokta hazır. Ankara\'dan Türkiye geneline hızlı teslimat. 0553 738 38 06'
+    metaDesc: 'Hyundai Accent Blue için G4FC sıfır sandık motor. Test edilmiş, garantili, stokta hazır.'
   },
   {
     id: 2,
@@ -1149,11 +1251,11 @@ const products = [
     image: 'G4FC-sifir-sandik-motor-hyundai-i30-sifir-sandik-motor-hyundai-i30-g4fc-sandik-motor.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai i30 için uyumlu G4FC serisi sandık motor, 1.6 litrelik DOHC yapısıyla uzun ömürlü ve güvenilir performans sunar. Test edilmiş ve garantili ürünler ile i30 sahiplerine en ekonomik motor çözümünü sunuyoruz.',
-    fullDesc: 'Hyundai i30 araçları için temin ettiğimiz G4FC kodlu sandık motor, 1.6 litre hacim ve 16 supaplı DOHC yapısıyla şehiriçi sürüşten uzun yol performansına kadar geniş bir yelpazede mükemmel güç sunar. Motor, depomuzda sızdırmazlık testi, hidrolik basınç kontrolü ve tam mekanik muayeneden geçirilmektedir. Yakıt enjeksiyon sistemi uyumlu valf zamanlaması, tüm devir aralıklarında tutarlı tork sağlar. i30 için piyasada en güvenilir sandık motor seçeneği olarak öne çıkan G4FC, Avrupa standartlarında imal edilmiş yüksek dayanımlı alaşım parçalar içermektedir.',
+    fullDesc: 'Hyundai i30 araçları için temin ettiğimiz G4FC kodlu sandık motor, hem performans hem de yakıt ekonomisi açısından sektördeki en güçlü seçeneklerden biridir. 1.6 litrelik yüksek verimli motor bloğu, Hyundai mühendislik standartlarına uygun üretilmiş olup i30 modellerinde tam uyum sağlar.',
     specs: ['Motor Kodu: G4FC', 'Hacim: 1.6L (1591cc)', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Benzin', 'Güç: ~124 HP'],
     cars: ['Hyundai i30 (2007–2017)', 'i30 Kombi ve Hatchback'],
     metaTitle: 'G4FC Hyundai i30 Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai i30 için G4FC sıfır sandık motor. Test edilmiş, garantili. Ankara\'dan hızlı teslimat. 0553 738 38 06'
+    metaDesc: 'Hyundai i30 için G4FC sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 3,
@@ -1165,11 +1267,11 @@ const products = [
     image: 'G4FC-sifir-sandik-motor-kia-ceed-sifir-sandik-motor-kia-ceed-g4fc-sandik-motor.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Kia Ceed modelleriyle tam uyumlu G4FC serisi sandık motor. 1.6 litrelik DOHC mimarisi ve yüksek güç çıkışıyla Ceed sahiplerine uzun ömürlü motor çözümü. Garantili ve test edilmiş.',
-    fullDesc: 'Kia Ceed araç sahiplerine yönelik G4FC serisi sandık motor, hem performans hem de yakıt ekonomisi açısından sektördeki en güçlü seçeneklerden biridir. 1.6 litrelik yüksek verimli motor bloğu, Kia\'nın mühendislik standartlarına uygun üretilmiş olup Ceed modellerinde tam uyum sağlar. Depomuzda gerçekleştirilen kapsamlı testler; yağ sızdırmazlığı, soğutma suyu geçişkenliği ve tüm mekanik toleranslara uygunluk kontrollerini kapsamaktadır. Özellikle Kia Ceed 1.6 benzinli sahiplerinin motor arızasında en çok tercih ettiği hazır çözümdür.',
+    fullDesc: 'Kia Ceed araç sahiplerine yönelik G4FC serisi sandık motor, hem performans hem de yakıt ekonomisi açısından sektördeki en güçlü seçeneklerden biridir. Depomuzda gerçekleştirilen kapsamlı testler; yağ sızdırmazlığı, soğutma suyu geçişkenliği ve tüm mekanik toleranslara uygunluk kontrollerini kapsamaktadır.',
     specs: ['Motor Kodu: G4FC', 'Hacim: 1.6L (1591cc)', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Benzin', 'Güç: ~124 HP'],
     cars: ['Kia Ceed (2006–2018)', 'Kia Pro Ceed uyumlu'],
     metaTitle: 'G4FC Kia Ceed Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Kia Ceed için G4FC sıfır sandık motor. Garantili, test edilmiş. Ankara\'dan Türkiye geneline hızlı kargo. 0553 738 38 06'
+    metaDesc: 'Kia Ceed için G4FC sıfır sandık motor. Garantili, test edilmiş.'
   },
   {
     id: 4,
@@ -1181,11 +1283,11 @@ const products = [
     image: 'G4FG-sifir-sandik-motor-hyundai-elantra-G4FG-motor-hyundai-elantra-g4fg-sifir-sandik-motor.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai Elantra 2010–2015 modelleri için G4FG serisi 1.6 GDi sandık motor. Doğrudan enjeksiyon teknolojisiyle geliştirilmiş yüksek verimli motor bloğu. Test edilmiş ve garantili teslimat.',
-    fullDesc: 'Hyundai Elantra\'nın 2010–2015 yılları arasında üretilen versiyonları için tasarlanmış G4FG serisi sandık motor, GDi (Benzin Doğrudan Enjeksiyon) teknolojisiyle donatılmıştır. Bu teknoloji, yakıtın doğrudan yanma odasına püskürtülmesi sayesinde geleneksel enjeksiyon sistemlerine kıyasla daha yüksek güç ve daha düşük yakıt tüketimi sağlar. Motor bloğu alüminyum alaşımlı yapısıyla hem hafif hem de son derece dayanıklıdır. Depomuzda her motor için ayrı ayrı yapılan basınç ve sızdırmazlık testleri, ürünün güvenilirliğini garanti altına alır.',
+    fullDesc: 'Hyundai Elantra\'nın 2010–2015 yılları arasında üretilen versiyonları için tasarlanmış G4FG serisi sandık motor, GDi (Benzin Doğrudan Enjeksiyon) teknolojisiyle donatılmıştır. Bu teknoloji, yakıtın doğrudan yanma odasına püskürtülmesi sayesinde geleneksel enjeksiyon sistemlerine kıyasla daha yüksek güç ve daha düşük yakıt tüketimi sağlar.',
     specs: ['Motor Kodu: G4FG', 'Hacim: 1.6L GDi', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: GDi Benzin', 'Güç: ~132 HP'],
     cars: ['Hyundai Elantra (2010–2015)', 'MD Kasa Elantra'],
     metaTitle: 'G4FG Hyundai Elantra Sandık Motor 2010-2015 | Cihat Hyundai',
-    metaDesc: 'Hyundai Elantra 2010-2015 için G4FG sıfır sandık motor. GDi teknolojisi, garantili. 0553 738 38 06'
+    metaDesc: 'Hyundai Elantra 2010-2015 için G4FG sıfır sandık motor. GDi teknolojisi, garantili.'
   },
   {
     id: 5,
@@ -1197,11 +1299,11 @@ const products = [
     image: 'G4FG-sifir-sandik-motor-hyundai-elantra-G4FG-motor-hyundai-elantra-g4fg-sifir-sandik-motor.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai Elantra 2015–2020 kasa için G4FG serisi sandık motor. Güncellenmiş GDi enjeksiyon sistemi ve geliştirilmiş soğutma kanallarıyla daha yüksek performans ve uzun ömür.',
-    fullDesc: 'Hyundai Elantra\'nın 2015–2020 üretim dönemine ait AD kasa modellerine uygun G4FG serisi sandık motor, güncellenmiş yakıt enjeksiyon haritası ve geliştirilmiş piston grubu tasarımıyla önceki nesle göre daha verimli çalışır. Bu dönemde üretilen Elantra\'ların motor arızasında en sık başvurulan çözüm olan G4FG sandık motoru, depomuzdaki test ünitelerinde tüm yük altı performans ölçümleri tamamlanmış olarak teslim edilir. Geliştirilmiş soğutma kanalları sayesinde uzun vadeli termal stabilite sağlar.',
+    fullDesc: 'Hyundai Elantra\'nın 2015–2020 üretim dönemine ait AD kasa modellerine uygun G4FG serisi sandık motor, güncellenmiş yakıt enjeksiyon haritası ve geliştirilmiş piston grubu tasarımıyla önceki nesle göre daha verimli çalışır.',
     specs: ['Motor Kodu: G4FG', 'Hacim: 1.6L GDi', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: GDi Benzin', 'Güç: ~132 HP'],
     cars: ['Hyundai Elantra (2015–2020)', 'AD Kasa Elantra'],
     metaTitle: 'G4FG Hyundai Elantra Sandık Motor 2015-2020 | Cihat Hyundai',
-    metaDesc: 'Hyundai Elantra 2015-2020 AD kasa için G4FG sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Hyundai Elantra 2015-2020 AD kasa için G4FG sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 6,
@@ -1213,11 +1315,11 @@ const products = [
     image: 'G4FJ MOTOR - G4FJ SIFIR MOTOR - TUCSON SIFIR MOTOR -TUCSON MOTOR.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai Tucson için özel temin edilmiş G4FJ serisi 1.6T GDi turbolu sandık motor. Yüksek tork, güçlü çekiş ve turbo teknolojisiyle donatılmış Tucson sahiplerinin favori motor seçeneği.',
-    fullDesc: 'Hyundai Tucson araçlarına yönelik G4FJ serisi sandık motor, 1.6 litrelik doğrudan enjeksiyonlu turbolu yapısıyla sınıfının en yüksek performanslı motorlarından biri olma özelliğini korumaktadır. Turbo kompresör desteği, düşük devir aralıklarında bile yüksek tork üretimi sağlayarak hem şehiriçi trafikte hem de yokuş ve taşıt çekme gibi zorlu koşullarda üstün performans sunar. GDi teknolojisi ile optimize edilmiş yanma süreci, yakıt ekonomisini önemli ölçüde artırır. Depomuzdaki her G4FJ motoru turbo bağlantı noktaları, yağ girişi ve soğutma sirkülasyonu kontrolleri dahil kapsamlı teste tabi tutulmaktadır.',
+    fullDesc: 'Hyundai Tucson araçlarına yönelik G4FJ serisi sandık motor, 1.6 litrelik doğrudan enjeksiyonlu turbolu yapısıyla sınıfının en yüksek performanslı motorlarından biri olma özelliğini korumaktadır. Turbo kompresör desteği, düşük devir aralıklarında bile yüksek tork üretimi sağlar.',
     specs: ['Motor Kodu: G4FJ', 'Hacim: 1.6L T-GDi', 'Turbo: Evet', 'Valf Sistemi: DOHC', 'Yakıt: T-GDi Benzin', 'Güç: ~177 HP'],
     cars: ['Hyundai Tucson (2015–2021)', 'TL/TLE Kasa'],
     metaTitle: 'G4FJ Hyundai Tucson Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai Tucson için G4FJ 1.6T sıfır sandık motor. Turbolu, garantili, stokta hazır. 0553 738 38 06'
+    metaDesc: 'Hyundai Tucson için G4FJ 1.6T sıfır sandık motor. Turbolu, garantili, stokta hazır.'
   },
   {
     id: 7,
@@ -1229,11 +1331,11 @@ const products = [
     image: 'G4FJ-sifir-sandik-motor-kia-sportage-sifir-sandik-motor-sportage-g4fj-sandik-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Kia Sportage için G4FJ serisi 1.6T turbolu sandık motor. Güçlü çekiş kabiliyeti, optimize edilmiş yakıt tüketimi ve turbo desteğiyle Sportage sahiplerine en güvenilir motor çözümü.',
-    fullDesc: 'Kia Sportage modellerinde kullanılan G4FJ serisi 1.6T turbolu motor, SUV segmentindeki en başarılı motor platformlarından biridir. Turboşarjlı yapısı sayesinde hem yakıt tasarrufu hem de yüksek performans bir arada sunulmaktadır. Özellikle Kia Sportage 4WD ve AWD versiyonlarında güvenilir güç aktarımı için tasarlanan bu motor, depomuzdaki testlerde her koşulda stabil çalışması doğrulanmış şekilde teslim edilmektedir. Garantili satış ve montaj danışmanlığı ile Sportage sahipleri için eksiksiz bir çözüm sunulmaktadır.',
+    fullDesc: 'Kia Sportage modellerinde kullanılan G4FJ serisi 1.6T turbolu motor, SUV segmentindeki en başarılı motor platformlarından biridir. Turboşarjlı yapısı sayesinde hem yakıt tasarrufu hem de yüksek performans bir arada sunulmaktadır.',
     specs: ['Motor Kodu: G4FJ', 'Hacim: 1.6L T-GDi', 'Turbo: Evet', 'Valf Sistemi: DOHC', 'Yakıt: T-GDi Benzin', 'Güç: ~177 HP'],
     cars: ['Kia Sportage (2015–2021)', 'QL Kasa'],
     metaTitle: 'G4FJ Kia Sportage Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Kia Sportage için G4FJ 1.6T sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Kia Sportage için G4FJ 1.6T sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 8,
@@ -1245,11 +1347,11 @@ const products = [
     image: 'G4FJ-tucson-sifir-sandik-motor-hyundai-tucson-g4fj-sifir-sandik-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai Tucson alternatif kasa modelleri için G4FJ serisi sandık motor. Turbo ve GDi teknolojisiyle her kullanım koşulunda güçlü performans. Garantili teslim.',
-    fullDesc: 'Hyundai Tucson\'un farklı kasa ve model yılı versiyonlarına uyumlu G4FJ serisi bu sandık motor, alternatif donanım paketleri ve üretim yılları için ayrıca stoklanmaktadır. Turbo desteği ve doğrudan benzin enjeksiyonu teknolojisiyle donatılmış olan bu motor, motorun üretim dönemine göre farklı montaj noktaları ve sensör bağlantıları barındırabilir. Uzman ekibimiz, aracınızın kasa kodu ve üretim yılına göre en uygun G4FJ motorunu belirlemenizde size yardımcı olur.',
+    fullDesc: 'Hyundai Tucson\'un farklı kasa ve model yılı versiyonlarına uyumlu G4FJ serisi bu sandık motor, alternatif donanım paketleri ve üretim yılları için ayrıca stoklanmaktadır. Uzman ekibimiz, aracınızın kasa kodu ve üretim yılına göre en uygun G4FJ motorunu belirlemenizde size yardımcı olur.',
     specs: ['Motor Kodu: G4FJ', 'Hacim: 1.6L T-GDi', 'Turbo: Evet', 'Valf Sistemi: DOHC', 'Yakıt: T-GDi Benzin', 'Güç: ~177 HP'],
     cars: ['Hyundai Tucson alternatif kasa', 'Farklı model yılı uyumlu'],
     metaTitle: 'G4FJ Hyundai Tucson Sandık Motor Alternatif | Cihat Hyundai',
-    metaDesc: 'Hyundai Tucson alternatif kasa için G4FJ sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Hyundai Tucson alternatif kasa için G4FJ sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 9,
@@ -1261,11 +1363,11 @@ const products = [
     image: 'G4LA-sifir-sandik-motor-hyundai-i10-sifir-sandik-motor-hyundai-i10-g4la-sifir-sandik-motor-˜10-sifir-motor.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai i10 için G4LA serisi 1.0 litre 3 silindirli sandık motor. Şehir içi kullanıma özel tasarlanmış kompakt motor yapısı. Düşük yakıt tüketimi ve uzun ömürlü performans garantisi.',
-    fullDesc: 'Hyundai i10 modellerinde kullanılan G4LA serisi motor, 1.0 litrelik 3 silindir yapısıyla kentsel sürüş için optimize edilmiş bir tasarıma sahiptir. Kompakt ebatları ve hafif yapısı sayesinde aracın yakıt tüketimini minimum seviyede tutarken şehir içi trafiğin yoğun start-stop döngüsüne karşı yüksek dayanıklılık sergiler. Güçlü silindir bloğu ve gelişmiş ısıl yönetim sistemi, uzun vadeli motor sağlığını korur. Depomuzdaki test süreçlerinde sıkıştırma testi, yağ basıncı ve soğutma testleri uygulanmaktadır.',
+    fullDesc: 'Hyundai i10 modellerinde kullanılan G4LA serisi motor, 1.0 litrelik 3 silindir yapısıyla kentsel sürüş için optimize edilmiş bir tasarıma sahiptir. Kompakt ebatları ve hafif yapısı sayesinde aracın yakıt tüketimini minimum seviyede tutarken şehir içi trafiğin yoğun start-stop döngüsüne karşı yüksek dayanıklılık sergiler.',
     specs: ['Motor Kodu: G4LA', 'Hacim: 1.0L (998cc)', 'Silindir Sayısı: 3', 'Valf Sistemi: DOHC 12V', 'Yakıt: Benzin', 'Güç: ~69 HP'],
     cars: ['Hyundai i10 (2007–2020)', 'PA / IA Kasa i10'],
     metaTitle: 'G4LA Hyundai i10 Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai i10 için G4LA sıfır sandık motor. 1.0L 3 silindir, garantili, stokta. 0553 738 38 06'
+    metaDesc: 'Hyundai i10 için G4LA sıfır sandık motor. 1.0L 3 silindir, garantili, stokta.'
   },
   {
     id: 10,
@@ -1277,11 +1379,11 @@ const products = [
     image: 'G4LA-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4la-sifir-sandik-motor.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai i20 modelleri için G4LA serisi 1.0 litre sandık motor. Kompakt yapı, düşük yakıt tüketimi ve yüksek güvenilirlik. Test edilmiş ve garantili teslimat.',
-    fullDesc: 'Hyundai i20\'nin 1.0 litrelik versiyonları için sunulan G4LA serisi sandık motor, şehir ve şehirlerarası kullanımda dengeli bir performans profili sergiler. Üç silindirli kompakt yapısı, aracın ağırlık dengesini optimize ederken yakıt tüketimini de en verimli seviyede tutar. Hyundai\'nin mühendislik deneyimini yansıtan bu motor bloğu, titreşim sönümleme ve termal yönetim açısından üst düzey özellikler barındırır. Depomuzdaki kapsamlı kontrol süreçleri, teslim edilen her motoru alanda güvenle kullanılabilir hale getirir.',
+    fullDesc: 'Hyundai i20\'nin 1.0 litrelik versiyonları için sunulan G4LA serisi sandık motor, şehir ve şehirlerarası kullanımda dengeli bir performans profili sergiler. Üç silindirli kompakt yapısı, aracın ağırlık dengesini optimize ederken yakıt tüketimini de en verimli seviyede tutar.',
     specs: ['Motor Kodu: G4LA', 'Hacim: 1.0L (998cc)', 'Silindir Sayısı: 3', 'Valf Sistemi: DOHC 12V', 'Yakıt: Benzin', 'Güç: ~69 HP'],
     cars: ['Hyundai i20 1.0 (2008–2020)', 'PB / GB Kasa'],
     metaTitle: 'G4LA Hyundai i20 Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai i20 1.0 için G4LA sıfır sandık motor. Kompakt, ekonomik, garantili. 0553 738 38 06'
+    metaDesc: 'Hyundai i20 1.0 için G4LA sıfır sandık motor. Kompakt, ekonomik, garantili.'
   },
   {
     id: 11,
@@ -1293,11 +1395,11 @@ const products = [
     image: 'G4LC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4lc-sifir-sandik-motor.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai Accent Blue için G4LC serisi 1.4 litrelik sandık motor. Yakıt tasarruflu ve güvenilir yapısıyla Accent Blue sahiplerine uzun ömürlü motor çözümü sunulur.',
-    fullDesc: 'G4LC serisi sandık motor, Hyundai Accent Blue\'nun 1.4 litrelik benzinli versiyonları için tasarlanmış ekonomik ve güvenilir bir motor seçeneğidir. DOHC 16V valf yapısı, her çalışma koşulunda yeterli güç ve tork sağlarken yakıt tüketimini minimize eder. Accent Blue gibi yüksek satış hacmine sahip bir modelin en yaygın motor seçeneği olan G4LC, depomuzda stok halinde hazır beklemekte olup tüm kontroller tamamlanmış şekilde teslim edilmektedir. Montaj kolaylığı ve geniş servis ağı uyumluluğuyla tercih edilen bir motor platformudur.',
+    fullDesc: 'G4LC serisi sandık motor, Hyundai Accent Blue\'nun 1.4 litrelik benzinli versiyonları için tasarlanmış ekonomik ve güvenilir bir motor seçeneğidir. DOHC 16V valf yapısı, her çalışma koşulunda yeterli güç ve tork sağlarken yakıt tüketimini minimize eder.',
     specs: ['Motor Kodu: G4LC', 'Hacim: 1.4L (1368cc)', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Benzin', 'Güç: ~100 HP'],
     cars: ['Hyundai Accent Blue 1.4 (2011–2019)'],
     metaTitle: 'G4LC Hyundai Accent Blue Sandık Motor | Cihat Hyundai',
-    metaDesc: 'Hyundai Accent Blue 1.4 için G4LC sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Hyundai Accent Blue 1.4 için G4LC sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 12,
@@ -1309,11 +1411,11 @@ const products = [
     image: 'G4LC-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4lc-sifir-sandik-motor.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai i20 modelleri için G4LC serisi 1.4 litre sandık motor. Kompakt ve güvenilir motor yapısıyla uzun ömürlü ve yakıt tasarruflu performans. Garantili teslimat.',
-    fullDesc: 'Hyundai i20\'nin 1.4 litrelik benzinli versiyonlarına uyumlu G4LC serisi sandık motor, hem günlük şehir kullanımında hem de uzun yol sürüşlerinde istikrarlı bir performans profili sunar. Motor bloğunun titizlikle işlenmiş alaşım yapısı, güçlü bir termal dayanım sağlarken bakım döngülerini uzatır. Depomuzda her G4LC motoru için uygulanan sıkıştırma testi ve tam mekanik muayene, teslimat öncesinde motorun güvenilirliğini teyit eder. i20 sahiplerinin en çok tercih ettiği ekonomik motor çözümlerindendir.',
+    fullDesc: 'Hyundai i20\'nin 1.4 litrelik benzinli versiyonlarına uyumlu G4LC serisi sandık motor, hem günlük şehir kullanımında hem de uzun yol sürüşlerinde istikrarlı bir performans profili sunar.',
     specs: ['Motor Kodu: G4LC', 'Hacim: 1.4L (1368cc)', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Benzin', 'Güç: ~100 HP'],
     cars: ['Hyundai i20 1.4 (2008–2020)', 'PB / GB Kasa'],
     metaTitle: 'G4LC Hyundai i20 Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai i20 1.4 için G4LC sıfır sandık motor. Garantili, stokta hazır. 0553 738 38 06'
+    metaDesc: 'Hyundai i20 1.4 için G4LC sıfır sandık motor. Garantili, stokta hazır.'
   },
   {
     id: 13,
@@ -1325,11 +1427,11 @@ const products = [
     image: 'G4LC-sifir-sandik-motor-kia-rio-sifir-sandik-motor-kia-rio-g4lc-sifir-sandik-motor.JPEG',
     badge: 'Stokta Mevcut',
     desc: 'Kia Rio için G4LC serisi 1.4 litre sandık motor. Kompakt, ekonomik ve yüksek güvenilirlikli motor yapısıyla Rio sahiplerine en uzun ömürlü motor çözümü.',
-    fullDesc: 'Kia Rio\'nun 1.4 litrelik benzinli modellerine uyumlu G4LC serisi sandık motor, Kia\'nın bütçe dostu ama güvenilir motor platformunun en sağlam temsilcilerindendir. Şehir içi dinamikler gözetilerek optimize edilmiş motor haritası, Rio\'nun hafif gövdesiyle mükemmel bir uyum sağlar. Yakıt tüketimi açısından segmentinin en verimli motorları arasında yer alan G4LC, bakım maliyetlerinin düşüklüğüyle de öne çıkar. Depomuzda tüm kontrolleri tamamlanmış stok mevcuttur.',
+    fullDesc: 'Kia Rio\'nun 1.4 litrelik benzinli modellerine uyumlu G4LC serisi sandık motor, Kia\'nın bütçe dostu ama güvenilir motor platformunun en sağlam temsilcilerindendir. Depomuzda tüm kontrolleri tamamlanmış stok mevcuttur.',
     specs: ['Motor Kodu: G4LC', 'Hacim: 1.4L (1368cc)', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Benzin', 'Güç: ~100 HP'],
     cars: ['Kia Rio 1.4 (2011–2021)', 'UB Kasa Rio'],
     metaTitle: 'G4LC Kia Rio Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Kia Rio 1.4 için G4LC sıfır sandık motor. Garantili, test edilmiş. 0553 738 38 06'
+    metaDesc: 'Kia Rio 1.4 için G4LC sıfır sandık motor. Garantili, test edilmiş.'
   },
   {
     id: 14,
@@ -1341,11 +1443,11 @@ const products = [
     image: 'hyundai-elantra-sifir-motor-G4FD-motor-2010-2015-g4fd-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai Elantra için G4FD serisi 1.6 CRDi dizel sandık motor. Düşük yakıt tüketimi, yüksek tork ve sağlam dizel motor yapısıyla uzun mesafe sürüşleri için ideal çözüm.',
-    fullDesc: 'Hyundai Elantra\'nın 1.6 CRDi dizel versiyonlarına uyumlu G4FD serisi sandık motor, dizel yakıt enjeksiyon teknolojisinin sunduğu yüksek tork ve düşük yakıt tüketimi avantajlarını bir arada barındırır. Özellikle uzun yol ve ticari kullanım tercihlerinde öne çıkan bu motor, güçlü silindir bloğu ve yüksek basınçlı common rail yakıt sistemiyle donatılmıştır. Elantra dizel sahiplerinin motor arızasında en sık tercih ettiği sandık motor olan G4FD, depomuzda tam mekanik muayene ve basınç testlerinden geçirilmiş şekilde stoklanmaktadır.',
+    fullDesc: 'Hyundai Elantra\'nın 1.6 CRDi dizel versiyonlarına uyumlu G4FD serisi sandık motor, dizel yakıt enjeksiyon teknolojisinin sunduğu yüksek tork ve düşük yakıt tüketimi avantajlarını bir arada barındırır.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.6L CRDi Dizel', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel', 'Güç: ~128 HP'],
     cars: ['Hyundai Elantra 1.6 CRDi (2010–2015)', 'MD Kasa'],
     metaTitle: 'G4FD Hyundai Elantra Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai Elantra 1.6 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Hyundai Elantra 1.6 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 15,
@@ -1357,11 +1459,11 @@ const products = [
     image: 'hyundai-i30-sifir-sandik-motor-hyundai-i30-G4FD-motor-i30-g4fd-sifir-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai i30 1.6 CRDi dizel için G4FD serisi sandık motor. Ekonomik dizel tüketimi ve güçlü tork değerleriyle i30 sahiplerine uzun vadeli motor çözümü.',
-    fullDesc: 'Hyundai i30\'un 1.6 CRDi dizel versiyonlarına yönelik G4FD serisi sandık motor, bu modelin Avrupa pazarında en çok satan versiyonlarından birinde kullanılan güvenilir bir dizel motor platformudur. Yüksek basınçlı common rail sistemi ve DOHC 16V valf yapısı, düşük devirden başlayarak yüksek tork sunması sayesinde hem şehiriçinde hem de yolculuklarda konforlu sürüş sağlar. Depomuzdaki G4FD motorları; yakıt enjektörü dışındaki tüm mekanik komponentleri içeren tam motor bloğu olarak teslim edilmektedir.',
+    fullDesc: 'Hyundai i30\'un 1.6 CRDi dizel versiyonlarına yönelik G4FD serisi sandık motor, bu modelin Avrupa pazarında en çok satan versiyonlarından birinde kullanılan güvenilir bir dizel motor platformudur.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.6L CRDi Dizel', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel', 'Güç: ~128 HP'],
     cars: ['Hyundai i30 1.6 CRDi (2007–2017)', 'FD / GD Kasa'],
     metaTitle: 'G4FD Hyundai i30 Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai i30 1.6 CRDi için G4FD sıfır sandık motor. Garantili, test edilmiş. 0553 738 38 06'
+    metaDesc: 'Hyundai i30 1.6 CRDi için G4FD sıfır sandık motor. Garantili, test edilmiş.'
   },
   {
     id: 16,
@@ -1373,11 +1475,11 @@ const products = [
     image: 'hyundai-i30-sifir-motor-G4FD-sandik-motor-2011-2017-g4fd-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai i30 2011–2017 modelleri için G4FD sandık motor. GD kasa i30\'un dizel motor arızasında en güvenilir ve hızlı temin edilen motor seçeneği. Garantili teslimat.',
-    fullDesc: 'Hyundai i30\'un 2011–2017 yılları arasında üretilen GD kasa modellerine özel olarak stoklanan G4FD serisi sandık motor, bu dönem araçlarının montaj gereksinimlerine tam uyumludur. Motor bağlantı noktaları, sensör yerleşimi ve şanzıman adaptörü bu model yılı için üretim spesifikasyonlarında standart hale getirilmiştir. Uzman ekibimiz, araç şasi numarasına göre doğru motoru belirlemenize yardımcı olur. Stok mevcudiyeti yüksek olan bu model, hızlı teslimat garantisiyle sunulmaktadır.',
+    fullDesc: 'Hyundai i30\'un 2011–2017 yılları arasında üretilen GD kasa modellerine özel olarak stoklanan G4FD serisi sandık motor, bu dönem araçlarının montaj gereksinimlerine tam uyumludur.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.6L CRDi Dizel', 'Kasa: GD i30 (2011-17)', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel', 'Güç: ~128 HP'],
     cars: ['Hyundai i30 GD Kasa (2011–2017)'],
     metaTitle: 'G4FD Hyundai i30 Sandık Motor 2011-2017 | Cihat Hyundai',
-    metaDesc: 'Hyundai i30 2011-2017 GD kasa için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Hyundai i30 2011-2017 GD kasa için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 17,
@@ -1389,11 +1491,11 @@ const products = [
     image: 'hyundai-ix35-sandik-motor-hyundai-ix35-sifir-sandik-motor-G4FD-motor-hyundai-ix35-g4fd-sandik-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai ix35 için G4FD serisi 1.7 CRDi dizel sandık motor. SUV kullanımına uygun yüksek tork ve dayanıklı motor yapısı. Test edilmiş, garantili, stokta hazır.',
-    fullDesc: 'Hyundai ix35\'in 1.7 CRDi dizel motorlu versiyonlarına uyumlu G4FD serisi sandık motor, orta segment SUV kullanıcılarının yüksek talep gösterdiği güçlü bir dizel motor platformudur. ix35\'in ağırlık ve çekiş karakterine uygun torku ile hem kentsel hem de yol dışı koşullarda güvenle kullanılabilir. Depomuzda özellikle ix35 uyumlu konfigürasyonda stoklanan bu motor; yağ pompası, zincir sistemi ve soğutma kanalları dahil tüm mekanik parçalarıyla birlikte teslim edilmektedir.',
+    fullDesc: 'Hyundai ix35\'in 1.7 CRDi dizel motorlu versiyonlarına uyumlu G4FD serisi sandık motor, orta segment SUV kullanıcılarının yüksek talep gösterdiği güçlü bir dizel motor platformudur.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.7L CRDi Dizel', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel', 'Güç: ~116 HP'],
     cars: ['Hyundai ix35 1.7 CRDi (2009–2015)', 'LM Kasa'],
     metaTitle: 'G4FD Hyundai ix35 Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai ix35 1.7 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Hyundai ix35 1.7 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 18,
@@ -1405,11 +1507,11 @@ const products = [
     image: 'hyundai-tucson-sifir-motor-sandik-motor-G4FD-motor-g4fd-sandik-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Hyundai Tucson dizel için G4FD serisi sandık motor. Güçlü SUV tork değerleri, ekonomik yakıt tüketimi ve sağlam dizel motor yapısıyla Tucson sahiplerine uzun vadeli güven.',
-    fullDesc: 'Hyundai Tucson\'un dizel motor versiyonlarında kullanılan G4FD serisi sandık motor, SUV dinamiklerine uygun olarak optimize edilmiş yüksek tork değerleri ve güçlü motor yapısıyla öne çıkar. Common rail dizel sistemi, her yük koşulunda tutarlı performans sunarken yakıt tüketimini verimli seviyelerde tutar. Depomuzda Tucson dizel uyumlu konfigürasyonlarda stoklanan bu motor, montaj öncesi tüm mekanik kontrolleri tamamlanmış şekilde teslim edilir. Uzmanlarımız, araç model yılına göre en uygun G4FD konfigürasyonunu seçmenize yardımcı olur.',
+    fullDesc: 'Hyundai Tucson\'un dizel motor versiyonlarında kullanılan G4FD serisi sandık motor, SUV dinamiklerine uygun olarak optimize edilmiş yüksek tork değerleri ve güçlü motor yapısıyla öne çıkar.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.6/1.7L CRDi', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel'],
     cars: ['Hyundai Tucson dizel versiyonlar', 'TL / LM Kasa uyumlu'],
     metaTitle: 'G4FD Hyundai Tucson Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Hyundai Tucson dizel için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Hyundai Tucson dizel için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 19,
@@ -1421,11 +1523,11 @@ const products = [
     image: 'kia-ceed-sifir-sandik-motor-G4FD-motor-ceed-g4fd-sifir-sandik-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Kia Ceed dizel için G4FD serisi sandık motor. Avrupa pazarında en çok tercih edilen Ceed dizel motorudur. Ekonomik tüketim ve güçlü tork değerleriyle uzun ömürlü çözüm.',
-    fullDesc: 'Kia Ceed\'in 1.6 CRDi dizel versiyonlarına uyumlu G4FD serisi sandık motor, Avrupa\'nın en çok satan kompakt otomobil segmentine yönelik güvenilir bir motor platformudur. Ceed ailesi içindeki dizel versiyonların yüksek satış rakamları nedeniyle bu motoru depomuzda sürekli stokta tutmaktayız. Common rail yakıt sistemi ve DOHC 16V valf yapısıyla her sürüş koşuluna uyum sağlayan G4FD, kargo ile Türkiye\'nin her yerine hızlıca ulaştırılabilir.',
+    fullDesc: 'Kia Ceed\'in 1.6 CRDi dizel versiyonlarına uyumlu G4FD serisi sandık motor, Avrupa\'nın en çok satan kompakt otomobil segmentine yönelik güvenilir bir motor platformudur.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.6L CRDi Dizel', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel', 'Güç: ~128 HP'],
     cars: ['Kia Ceed 1.6 CRDi (2006–2012)', 'ED Kasa Ceed'],
     metaTitle: 'G4FD Kia Ceed Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Kia Ceed 1.6 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Kia Ceed 1.6 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 20,
@@ -1437,11 +1539,11 @@ const products = [
     image: 'kia-ceed-2-sifir-motor-G4FD-motor-2012-2018-g4fd-sandik-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Kia Ceed 2012–2018 JD kasa modelleri için G4FD dizel sandık motor. Yenilenen platform için özel stok. Montaj uyumluluğu test edilmiş ve garantilidir.',
-    fullDesc: 'Kia Ceed\'in 2012–2018 yılları arasında üretilen JD kasa versiyonlarına özel olarak stoklanan G4FD serisi sandık motor, bu dönem araçlarının montaj gereksinimlerine tam uyumludur. Önceki nesle göre güncellenmiş motor bağlantı noktaları ve sensör konfigürasyonuna sahip olan bu motor, aracın orijinal performansını en eksiksiz şekilde yeniden kazandırır. Kia Ceed JD sahiplerinin motor arızasında en hızlı çözüme ulaştığı motor seçeneği olarak depomuzda sürekli hazır bulundurmaktayız.',
+    fullDesc: 'Kia Ceed\'in 2012–2018 yılları arasında üretilen JD kasa versiyonlarına özel olarak stoklanan G4FD serisi sandık motor, bu dönem araçlarının montaj gereksinimlerine tam uyumludur.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.6L CRDi Dizel', 'Kasa: JD Ceed (2012-18)', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel', 'Güç: ~128 HP'],
     cars: ['Kia Ceed JD Kasa (2012–2018)'],
     metaTitle: 'G4FD Kia Ceed Sandık Motor 2012-2018 | Cihat Hyundai',
-    metaDesc: 'Kia Ceed JD 2012-2018 için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Kia Ceed JD 2012-2018 için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 21,
@@ -1453,11 +1555,11 @@ const products = [
     image: 'kia-cerato-sifir-sandik-motor-G4FD-motor-cerato-sandik-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Kia Cerato için G4FD serisi 1.6 CRDi dizel sandık motor. Sedan karakter ve uzun yol performansına uygun yüksek tork. Test edilmiş ve garantili teslim.',
-    fullDesc: 'Kia Cerato\'nun 1.6 CRDi dizel versiyonlarına uyumlu G4FD serisi sandık motor, sedan karakter ve uzun yol kullanımına özel optimize edilmiş bir motor profili sunar. Cerato\'nun ağırlık ve boyutlarıyla uyumlu güç ve tork değerleri, hem şehiriçi hem de otoyol sürüşlerinde tatmin edici bir sürüş deneyimi sağlar. Depomuzda her motor için uygulanan titiz test süreçleri; yağ sızdırmazlığı, soğutma suyu geçirgenliği ve komponent tolerans kontrolleri dahil kapsamlı muayeneyi kapsamaktadır.',
+    fullDesc: 'Kia Cerato\'nun 1.6 CRDi dizel versiyonlarına uyumlu G4FD serisi sandık motor, sedan karakter ve uzun yol kullanımına özel optimize edilmiş bir motor profili sunar.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.6L CRDi Dizel', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel', 'Güç: ~128 HP'],
     cars: ['Kia Cerato 1.6 CRDi (2008–2013)', 'TD Kasa'],
     metaTitle: 'G4FD Kia Cerato Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Kia Cerato 1.6 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Kia Cerato 1.6 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 22,
@@ -1469,11 +1571,11 @@ const products = [
     image: 'kia-rio-sifir-sandik-motor-kia-rio-3-sifir-sandik-motor-kia-rio-G4FD-motor-kia-rio-g4fd-sifir-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Kia Rio dizel için G4FD serisi sandık motor. Kompakt gövdeye güçlü dizel performans kombinasyonu. Yakıt ekonomisi ve güvenilir motor yapısıyla Rio dizel sahiplerinin tercihi.',
-    fullDesc: 'Kia Rio\'nun dizel motor versiyonlarına uyumlu G4FD serisi sandık motor, kompakt bir gövde içinde güçlü bir dizel performans sunan nadir motor seçeneklerinden biridir. Rio\'nun hafif yapısıyla birleştiğinde yakıt tüketimi son derece düşük seviyelere inerken motor gücü sürüş deneyimini tatmin edici kılar. Kia Rio dizel sahiplerine özel stok tuttuğumuz bu motor, kargo ile Türkiye\'nin her iline güvenle gönderilmektedir.',
+    fullDesc: 'Kia Rio\'nun dizel motor versiyonlarına uyumlu G4FD serisi sandık motor, kompakt bir gövde içinde güçlü bir dizel performans sunan nadir motor seçeneklerinden biridir.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.4/1.6L CRDi', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC', 'Yakıt: Dizel'],
     cars: ['Kia Rio dizel versiyonlar', 'UB Kasa uyumlu'],
     metaTitle: 'G4FD Kia Rio Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Kia Rio dizel için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Kia Rio dizel için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 23,
@@ -1485,11 +1587,11 @@ const products = [
     image: 'kia-soul-sifir-sandik-motor-kia-soul-G4FD-sifir-motor-g4fd-sandik-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Kia Soul dizel için G4FD serisi sandık motor. Crossover karakterini destekleyen yüksek tork ve güvenilir dizel motor yapısı. Test edilmiş ve garantili teslim.',
-    fullDesc: 'Kia Soul\'un dizel motor versiyonlarında kullanılan G4FD serisi sandık motor, bu crossover modelin kendine özgü kullanım profiline uygun yüksek tork ve güvenilirlik özellikleri barındırır. Soul\'un yüksek merkezli vücut yapısına uyum sağlayan bu motor, hem şehiriçi manevralar hem de bozuk yol koşullarında istikrarlı güç çıkışı sunar. Depomuzda Kia Soul dizel versiyonları için ayrıca stok tahsisi yapılmış olan G4FD motoru, hızlı teslimat garantisiyle sunulmaktadır.',
+    fullDesc: 'Kia Soul\'un dizel motor versiyonlarında kullanılan G4FD serisi sandık motor, bu crossover modelin kendine özgü kullanım profiline uygun yüksek tork ve güvenilirlik özellikleri barındırır.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.6L CRDi Dizel', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel', 'Güç: ~128 HP'],
     cars: ['Kia Soul 1.6 CRDi (2008–2019)', 'AM / PS Kasa'],
     metaTitle: 'G4FD Kia Soul Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Kia Soul 1.6 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Kia Soul 1.6 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   },
   {
     id: 24,
@@ -1501,11 +1603,11 @@ const products = [
     image: 'kia-sportage-sifir-sandik-motor-kia-sportage-G4FD-motor-sportage-sifir-g4fd-motor.jpeg',
     badge: 'Stokta Mevcut',
     desc: 'Kia Sportage dizel için G4FD serisi sandık motor. SUV kullanımına uygun yüksek tork, güvenilir dizel yapı ve uzun ömürlü performans. Test edilmiş ve garantilidir.',
-    fullDesc: 'Kia Sportage\'ın dizel motor versiyonlarına uyumlu G4FD serisi sandık motor, SUV dinamiklerine ve Sportage\'ın sürüş karakterine özel optimize edilmiş bir motor platformudur. Yüksek basınçlı common rail sistemi sayesinde düşük devir aralıklarından itibaren etkileyici tork değerleri üretir; bu da hem şehiriçi hem de zorlu arazi koşullarında güçlü çekiş sağlar. Kia Sportage dizel sahiplerinin en sık başvurduğu motor çözümü olarak depomuzda sürekli stok bulundurduğumuz G4FD, montaj danışmanlığı hizmetiyle birlikte teslim edilmektedir.',
+    fullDesc: 'Kia Sportage\'ın dizel motor versiyonlarına uyumlu G4FD serisi sandık motor, SUV dinamiklerine ve Sportage\'ın sürüş karakterine özel optimize edilmiş bir motor platformudur.',
     specs: ['Motor Kodu: G4FD', 'Hacim: 1.7L CRDi Dizel', 'Silindir Sayısı: 4', 'Valf Sistemi: DOHC 16V', 'Yakıt: Dizel', 'Güç: ~116 HP'],
     cars: ['Kia Sportage 1.7 CRDi (2010–2015)', 'SL Kasa Sportage'],
     metaTitle: 'G4FD Kia Sportage Sandık Motor | Cihat Hyundai Ankara',
-    metaDesc: 'Kia Sportage 1.7 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili. 0553 738 38 06'
+    metaDesc: 'Kia Sportage 1.7 CRDi için G4FD sıfır sandık motor. Test edilmiş, garantili.'
   }
 ];
 
@@ -1567,7 +1669,6 @@ function openModal(id) {
   document.getElementById('modalWhatsapp').href = `https://wa.me/905537383806?text=Merhaba%2C%20${encodeURIComponent(p.name)}%20hakkında%20fiyat%20bilgisi%20almak%20istiyorum.`;
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
-  // Update meta
   document.title = p.metaTitle;
 }
 
@@ -1617,7 +1718,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
       e.preventDefault();
-      const offset = 80;
+      const offset = 72;
       window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
     }
   });
