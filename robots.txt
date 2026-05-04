@@ -1,0 +1,11 @@
+# robots.txt - Cihat Hyundai
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /tmp/
+
+# Sitemap
+Sitemap: https://www.hyundaisifirmotor.com.tr/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
