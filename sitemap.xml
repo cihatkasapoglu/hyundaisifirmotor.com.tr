@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemaps-image/1.1">
+
+  <!-- ANA SAYFA -->
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ============== G4FC SERİSİ ============== -->
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fc-hyundai-accent-blue-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4FC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4fc-sandik-motor.JPEG</image:loc>
+      <image:title>G4FC Hyundai Accent Blue Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fc-hyundai-i30-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4FC-sifir-sandik-motor-hyundai-i30-sifir-sandik-motor-hyundai-i30-g4fc-sandik-motor.JPEG</image:loc>
+      <image:title>G4FC Hyundai i30 Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fc-kia-ceed-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4FC-sifir-sandik-motor-kia-ceed-sifir-sandik-motor-kia-ceed-g4fc-sandik-motor.JPEG</image:loc>
+      <image:title>G4FC Kia Ceed Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <!-- ============== G4FG SERİSİ ============== -->
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fg-hyundai-elantra-motor-2010-2015.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4FG-sifir-sandik-motor-hyundai-elantra-G4FG-motor-hyundai-elantra-g4fg-sifir-sandik-motor.JPEG</image:loc>
+      <image:title>G4FG Hyundai Elantra Sandık Motor 2010-2015</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fg-hyundai-elantra-motor-2015-2020.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4FG-sifir-sandik-motor-hyundai-elantra-G4FG-motor-hyundai-elantra-g4fg-sifir-sandik-motor.JPEG</image:loc>
+      <image:title>G4FG Hyundai Elantra Sandık Motor 2015-2020</image:title>
+    </image:image>
+  </url>
+
+  <!-- ============== G4FJ SERİSİ ============== -->
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fj-hyundai-tucson-motor-1.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4FJ%20MOTOR%20-%20G4FJ%20SIFIR%20MOTOR%20-%20TUCSON%20SIFIR%20MOTOR%20-TUCSON%20MOTOR.JPEG</image:loc>
+      <image:title>G4FJ Hyundai Tucson Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fj-kia-sportage-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4FJ-sifir-sandik-motor-kia-sportage-sifir-sandik-motor-sportage-g4fj-sandik-motor.jpeg</image:loc>
+      <image:title>G4FJ Kia Sportage Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fj-hyundai-tucson-motor-2.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4FJ-tucson-sifir-sandik-motor-hyundai-tucson-g4fj-sifir-sandik-motor.jpeg</image:loc>
+      <image:title>G4FJ Hyundai Tucson Sandık Motor Alternatif Kasa</image:title>
+    </image:image>
+  </url>
+
+  <!-- ============== G4LA SERİSİ ============== -->
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4la-hyundai-i10-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4LA-sifir-sandik-motor-hyundai-i10-sifir-sandik-motor-hyundai-i10-g4la-sifir-sandik-motor-%CB%9C10-sifir-motor.JPEG</image:loc>
+      <image:title>G4LA Hyundai i10 Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4la-hyundai-i20-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4LA-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4la-sifir-sandik-motor.JPEG</image:loc>
+      <image:title>G4LA Hyundai i20 Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <!-- ============== G4LC SERİSİ ============== -->
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4lc-hyundai-accent-blue-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4LC-sifir-sandik-motor-hyundai-accent-blue-sifir-sandik-motor-hyundai-accent-blue-g4lc-sifir-sandik-motor.JPEG</image:loc>
+      <image:title>G4LC Hyundai Accent Blue Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4lc-hyundai-i20-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4LC-sifir-sandik-motor-hyundai-i20-sifir-sandik-motor-hyundai-i20-g4lc-sifir-sandik-motor.JPEG</image:loc>
+      <image:title>G4LC Hyundai i20 Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4lc-kia-rio-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/G4LC-sifir-sandik-motor-kia-rio-sifir-sandik-motor-kia-rio-g4lc-sifir-sandik-motor.JPEG</image:loc>
+      <image:title>G4LC Kia Rio Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <!-- ============== G4FD SERİSİ ============== -->
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-hyundai-elantra-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/hyundai-elantra-sifir-motor-G4FD-motor-2010-2015-g4fd-motor.jpeg</image:loc>
+      <image:title>G4FD Hyundai Elantra Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-hyundai-i30-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/hyundai-i30-sifir-sandik-motor-hyundai-i30-G4FD-motor-i30-g4fd-sifir-motor.jpeg</image:loc>
+      <image:title>G4FD Hyundai i30 Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-hyundai-i30-motor-2011-2017.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/hyundai-i30-sifir-motor-G4FD-sandik-motor-2011-2017-g4fd-motor.jpeg</image:loc>
+      <image:title>G4FD Hyundai i30 Sandık Motor 2011-2017</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-hyundai-ix35-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/hyundai-ix35-sandik-motor-hyundai-ix35-sifir-sandik-motor-G4FD-motor-hyundai-ix35-g4fd-sandik-motor.jpeg</image:loc>
+      <image:title>G4FD Hyundai ix35 Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-hyundai-tucson-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/hyundai-tucson-sifir-motor-sandik-motor-G4FD-motor-g4fd-sandik-motor.jpeg</image:loc>
+      <image:title>G4FD Hyundai Tucson Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-kia-ceed-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/kia-ceed-sifir-sandik-motor-G4FD-motor-ceed-g4fd-sifir-sandik-motor.jpeg</image:loc>
+      <image:title>G4FD Kia Ceed Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-kia-ceed-motor-2012-2018.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/kia-ceed-2-sifir-motor-G4FD-motor-2012-2018-g4fd-sandik-motor.jpeg</image:loc>
+      <image:title>G4FD Kia Ceed Sandık Motor 2012-2018</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-kia-cerato-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/kia-cerato-sifir-sandik-motor-G4FD-motor-cerato-sandik-motor.jpeg</image:loc>
+      <image:title>G4FD Kia Cerato Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-kia-rio-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/kia-rio-sifir-sandik-motor-kia-rio-3-sifir-sandik-motor-kia-rio-G4FD-motor-kia-rio-g4fd-sifir-motor.jpeg</image:loc>
+      <image:title>G4FD Kia Rio Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-kia-soul-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/kia-soul-sifir-sandik-motor-kia-soul-G4FD-sifir-motor-g4fd-sandik-motor.jpeg</image:loc>
+      <image:title>G4FD Kia Soul Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.hyundaisifirmotor.com.tr/g4fd-kia-sportage-motor.html</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.hyundaisifirmotor.com.tr/kia-sportage-sifir-sandik-motor-kia-sportage-G4FD-motor-sportage-sifir-g4fd-motor.jpeg</image:loc>
+      <image:title>G4FD Kia Sportage Sandık Motor</image:title>
+    </image:image>
+  </url>
+
+</urlset>
